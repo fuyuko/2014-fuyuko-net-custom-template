@@ -17,7 +17,7 @@
                 }
             ?>
             <div class="entry-thumbnail" <?php if($url != NULL){ echo 'style="background-image: url(' . $url . ');"';} ?>>
-                <div class="entery-header-text">
+                <div class="entry-header-text">
 
                     <?php if ( is_single() ) : ?>
                         <h1 class="entry-title"><?php the_title(); ?></h1>
@@ -56,10 +56,10 @@
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-        <?php if ( comments_open()) : ?>
+        <?php if ( comments_open()){ ?>
             <div class="comments-link">
                 <?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment') . '</span>', __( 'One comment so far'), __( 'View all % comments') ); ?>
             </div><!-- .comments-link -->
-        <?php endif; // comments_open() ?>
+        <?php } // comments_open() ?>
     </footer><!-- .entry-meta -->
 </article><!-- #post -->

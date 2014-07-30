@@ -12,16 +12,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 $template-path: "/wp-content/themes/2014-fuyuko-net-custom-template";
+$color-primary: #13531a;
+$color-primary-accent: #5cb811;
+$color-primary-highlight: #77d42a;
+$color-border: #555;
+$color-shadow-green: #caefab;
+
 /***********************************
 
-Resets - based on html5doctor.com Reset Stylesheet
-
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-
+Resets
 ***********************************/
 
 %reset-basic{
@@ -30,113 +29,102 @@ Twitter: @rich_clark
 
   background:transparent;
 
-  font-family: "Open Sans", Helvetica, sans-serif;
   font-size:100%;
   vertical-align:baseline;
 }
 
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  @extend %reset-basic;
-  border:0;
-  outline:0;
-}
-
-body {
-  line-height:1;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-  display:block;
-}
-
-blockquote{
-  quotes:none;
-
-  &:before, &:after{
-    content:'';
-    content:none;
-  }
-}
-
-q{
-  @extend blockquote;
-}
-
-a {
-  @extend %reset-basic;
-}
-
-/* change colours to suit your needs */
-ins {
-  background-color:#ff9;
-  color:#000;
-  text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-  background-color:#ff9;
-  color:#000;
-  font-style:italic;
-  font-weight:bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom:1px dotted;
-  cursor:help;
-}
-
-table {
-  border-collapse:collapse;
-  border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display:block;
-  height:1px;
-  border:0;
-  border-top:1px solid #cccccc;
-  margin:1em 0;
-  padding:0;
-}
-
-input, select {
-  vertical-align:middle;
-}
 /***********************************
 
 General Structure
 
 ***********************************/
 
-%image-default-behavior{
-  max-width: 100% !important;
-  height: auto !important;
+html, body{
+  @extend %reset-basic;
+  font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-%default-svg{
-  margin-left: 20px;
-  margin-right: 10px;
-  width: 14px;
-  height: 14px;
+p{
+  margin: 1rem 0;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
+
+a{
+  color: $color-primary;
+  font-weight: bold;
+  &:hover{
+    color: $color-primary-accent;
+  }
+}
+
+li{
+  line-height: 1.5em;
+}
+
+iframe{
+  margin: 0 auto;
+}
+
+input{
+  border-radius: 4px;
+  border-width: 1px;
+  font-size: 16px;
+  padding-left: 5px;
+  color: $color-border;
+  &[type="text"]{
+    height: 24px;
+  }
+}
+
+.button, input[type="submit"]{
+  -moz-box-shadow:inset 0px 1px 0px 0px $color-shadow-green;
+  -webkit-box-shadow:inset 0px 1px 0px 0px $color-shadow-green;
+  box-shadow:inset 0px 1px 0px 0px $color-shadow-green;
+
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, $color-primary-highlight), color-stop(1, $color-primary-accent));
+  background:-moz-linear-gradient(top, $color-primary-highlight 5%, $color-primary-accent 100%);
+  background:-webkit-linear-gradient(top, $color-primary-highlight 5%, $color-primary-accent 100%);
+  background:-o-linear-gradient(top, $color-primary-highlight 5%, $color-primary-accent 100%);
+  background:-ms-linear-gradient(top, $color-primary-highlight 5%, $color-primary-accent 100%);
+  background:linear-gradient(to bottom, $color-primary-highlight 5%, $color-primary-accent 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color-primary-highlight}', endColorstr='#{$color-primary-accent}',GradientType=0);
+  background-color:$color-primary-highlight;
+
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+  border:1px solid #268a16;
+
+  display:inline-block;
+  cursor:pointer;
+  color:$color-primary;
+
+  font-size:14px;
+  font-weight:bold;
+  padding:4px 20px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px $color-shadow-green;
+
+    &:hover{
+      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, $color-primary-accent), color-stop(1, $color-primary-highlight));
+      background:-moz-linear-gradient(top, $color-primary-accent 5%, $color-primary-highlight 100%);
+      background:-webkit-linear-gradient(top, $color-primary-accent 5%, $color-primary-highlight 100%);
+      background:-o-linear-gradient(top, $color-primary-accent 5%, $color-primary-highlight 100%);
+      background:-ms-linear-gradient(top, $color-primary-accent 5%, $color-primary-highlight 100%);
+      background:linear-gradient(to bottom, $color-primary-accent 5%, $color-primary-highlight 100%);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color-primary-accent}', endColorstr='#{$color-primary-highlight}',GradientType=0);
+      background-color:$color-primary-accent;
+    }
+
+    &:active{
+      position:relative;
+      top:1px;
+    }
+}
+
+
+/* position related */
 
 .content-wrapper{
   max-width: 1040px;
@@ -144,15 +132,7 @@ General Structure
   padding: 20px;
 }
 
-p{
-  margin: 1rem 0;
-}
-
-li{
-  line-height: 1.5em;
-}
-
-/*WP common class names*/
+/*WP genarated classes*/
 
 .alignleft{
   float: left;
@@ -162,6 +142,25 @@ li{
 .alignright{
   float: right;
   padding:  0 0 10px 10px;
+}
+
+.aligncenter{
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.wp-caption{
+  @extend %image-default-behavior;
+
+  img{
+    margin-bottom: 5px;
+  }
+  .wp-caption-text{
+    font-weight: 300px;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
 /***********************************
@@ -217,11 +216,11 @@ nav{
     list-style:none; /* reset */
   }
 
-  /*header navigation*/
-  &#header-nav{
+
+  &#header-nav{ /*header navigation*/
     @extend %horizontal-nav;
     padding-top: 8px;
-    
+
     ul{
       text-align: right;
     }
@@ -229,11 +228,22 @@ nav{
       line-height: 1.5rem;
       text-decoration: none;
       color: white;
+      font-weight: normal;
+    }
+
+    .searchform{ /*header nav search form*/
+      float: right;
+      margin: 14px 15px 14px 10px;
+      label, input[type="submit"]{
+        display: none;
+      }
+      input[type="text"]{
+        min-width: 180px;
+      }
     }
   }
 
-  /*footer navigation*/
-  &#footer-nav{
+  &#footer-nav{ /*footer navigation*/
     @extend %horizontal-nav;
     color: white;
     a{
@@ -249,6 +259,17 @@ nav{
 Entry Content
 
 ***********************************/
+%image-default-behavior{
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+%default-svg{
+  margin-left: 20px;
+  margin-right: 10px;
+  width: 14px;
+  height: 14px;
+}
 
 article{
   .entry-thumbnail{
@@ -260,32 +281,35 @@ article{
 
     text-align: center;
 
-    background-color: #13531a;
+    background-color: $color-primary;
     background-repeat: no-repeat;
     background-size:100%;
     background-position:center;
 
-    .entry-title{
-      margin: 40px auto 0;
-      width: 100%;
-      font-size: 2rem;
-      color: white;
-      text-shadow:
-        -2px -2px 1px #000,
-        2px -2px 1px #000,
-        -2px 2px 1px #000,
-        2px 2px 1px #000;
+    .entry-header-text{
+      margin: 20px;
 
       a{
-        color: white;
-        text-shadow:
-          -2px -2px 1px #000,
-          2px -2px 1px #000,
-          -2px 2px 1px #000,
-          2px 2px 1px #000;
+        color: white !important;
         text-decoration: none;
+        font-weight: normal;
+      }
+
+      .entry-title{
+        margin: 30px auto 0;
+        width: 100%;
+        font-size: 2rem;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        color: white;
+        text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
+
+        a{
+          text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
+        }
       }
     }
+
 
   }
 
@@ -296,11 +320,7 @@ article{
   .entry-meta{
     @extend .content-wrapper;
     color: white;
-
-    a{
-      color: white;
-      text-decoration: none;
-    }
+    line-height: 1.4em;
 
     .date{
       margin-bottom: 10px;
@@ -328,24 +348,21 @@ article{
         content: url("#{$template-path}/svg/tag.svg");
       }
     }
+
+    .comments-link{
+      a{
+        &:before{
+          @extend %default-svg;
+          content: url("#{$template-path}/svg/bubbles.svg");
+        }
+      }
+    }
   }
 
   .twitter-tweet{
     margin: 0 auto !important;
   }
-  .wp-caption{
-    @extend %image-default-behavior;
 
-    img{
-      margin-bottom: 5px;
-    }
-    .wp-caption-text{
-      font-weight: 300px;
-      font-size: 0.8rem;
-      text-align: center;
-      margin-top: 0;
-    }
-  }
 
   img{
     @extend %image-default-behavior;
