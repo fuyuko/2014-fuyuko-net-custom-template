@@ -23,9 +23,19 @@
                     <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
                 </hgroup>
             </div>
-            <nav id="header-nav">
-                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-            </nav>
+            <div id="header-nav-area">
+                <div class="content-wrapper" style="padding: 0;">
+                    <?php if ( get_theme_mod( 'fuyuko_net_logo' ) ) : ?>
+                        <div class='site-logo'>
+                            <img src='<?php echo esc_url( get_theme_mod( 'fuyuko_net_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
+                        </div>
+                    <?php endif; ?>
+                    <nav id="header-nav">
+
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+                    </nav>
+                </div>
+            </div>
         </header>
 
         <div id="main">
