@@ -11,6 +11,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+$template-path: "/wp-content/themes/2014-fuyuko-net-custom-template";
 /***********************************
 
 Resets - based on html5doctor.com Reset Stylesheet
@@ -124,10 +125,19 @@ input, select {
 General Structure
 
 ***********************************/
+
 %image-default-behavior{
   max-width: 100% !important;
   height: auto !important;
 }
+
+%default-svg{
+  margin-left: 10px;
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+}
+
 .content-wrapper{
   max-width: 1040px;
   margin: 0 auto;
@@ -141,6 +151,8 @@ p{
 li{
   line-height: 1.5em;
 }
+
+/*WP common class names*/
 
 .alignleft{
   float: left;
@@ -199,7 +211,7 @@ nav{
   &#header-nav{
     @extend %horizontal-nav;
 
-    /*sticky navigation*/
+    /*sticky navigation - http://xomisse.com/blog/create-a-sticky-navigation-when-scrolling-on-blogger/ */
     position: fixed;
     top: 32px;
     left: 0px;
@@ -241,28 +253,40 @@ Entry Content
 article{
   .entry-thumbnail{
     width: 100%;
-    min-height: 300px;
+    min-height: 350px;
     max-height: 500px;
+
     overflow: hidden;
-    vertical-align: middle;
-    position: relative;
+
     text-align: center;
+
     background-color: #13531a;
+    background-repeat: no-repeat;
+    background-size:100%;
+    background-position:center;
 
     .entry-title{
-      margin: 0 auto;
-      padding: 0 20px;
-      position: absolute;
-      top: 50%;
+      margin: 40px auto 0;
       width: 100%;
       font-size: 2rem;
       color: white;
+      text-shadow:
+        -2px -2px 1px #000,
+        2px -2px 1px #000,
+        -2px 2px 1px #000,
+        2px 2px 1px #000;
+
+      a{
+        color: white;
+        text-shadow:
+          -2px -2px 1px #000,
+          2px -2px 1px #000,
+          -2px 2px 1px #000,
+          2px 2px 1px #000;
+        text-decoration: none;
+      }
     }
 
-    img{
-      width: 100%;
-      height: auto;
-    }
   }
 
   .entry-content{
@@ -271,6 +295,39 @@ article{
 
   .entry-meta{
     @extend .content-wrapper;
+    color: white;
+
+    a{
+      color: white;
+      text-decoration: none;
+    }
+
+    .date{
+      margin-bottom: 10px;
+    }
+
+    .edit-link{
+      a{
+        &:before{
+          @extend %default-svg;
+          content: url("#{$template-path}/svg/pencil.svg");
+        }
+      }
+    }
+
+    .categories-links{
+      &:before{
+        @extend %default-svg;
+        content: url("#{$template-path}/svg/folder-open.svg");
+      }
+    }
+
+    .tags-links{
+      &:before{
+        @extend %default-svg;
+        content: url("#{$template-path}/svg/tag.svg");
+      }
+    }
   }
 
   .twitter-tweet{
