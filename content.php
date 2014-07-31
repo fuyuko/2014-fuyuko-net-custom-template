@@ -56,10 +56,17 @@
     </div><!-- .entry-content -->
 
     <footer class="entry-meta">
-        <?php if ( comments_open()){ ?>
-            <div class="comments-link">
-                <?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment') . '</span>', __( 'One comment so far'), __( 'View all % comments') ); ?>
-            </div><!-- .comments-link -->
-        <?php } // comments_open() ?>
+        <?php if ( comments_open()){
+            if(!is_page() && !is_single()){
+        ?>
+                <div class="comments-link">
+                    <?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment') . '</span>', __( 'One comment so far'), __( 'View all % comments') ); ?>
+                </div><!-- .comments-link -->
+        <?php   }else{ ?>
+                <?php comments_template(); ?>
+        <?php
+                }
+            } // comments_open()
+        ?>
     </footer><!-- .entry-meta -->
 </article><!-- #post -->

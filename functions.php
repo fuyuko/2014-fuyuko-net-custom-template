@@ -15,6 +15,7 @@ Script & Stylesheet Management
 function fuyuko_net_scripts_styles(){
     // Loads our main stylesheet.
     wp_enqueue_style( '2014_fuyuko_net_style', get_stylesheet_uri(), array(), '2017-07-28' );
+    //wp_enqueue_script( '2014_fuyuko_net_fluid_video', get_template_directory_uri() . '/js/fluid_video.js', array( 'jquery' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'fuyuko_net_scripts_styles' );
 

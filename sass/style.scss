@@ -13,14 +13,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 $template-path: "/wp-content/themes/2014-fuyuko-net-custom-template";
 $color-primary: #13531a;
+$color-primary-light: #136E1A;
 $color-primary-accent: #5cb811;
 $color-primary-highlight: #77d42a;
 $color-border: #555;
 $color-shadow-green: #caefab;
 
+$color-text: black;
+
 /***********************************
 
 Resets
+
 ***********************************/
 
 %reset-basic{
@@ -50,6 +54,14 @@ p{
   word-wrap: break-word;
 }
 
+/* Link Related */
+
+%link-white{
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+}
+
 a{
   color: $color-primary;
   font-weight: bold;
@@ -57,6 +69,8 @@ a{
     color: $color-primary-accent;
   }
 }
+
+/* List Related */
 
 li{
   line-height: 1.5em;
@@ -177,7 +191,7 @@ Site Header Area
   z-index: 999;
 
   width:100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   color: white;
 
   .site-logo{
@@ -225,10 +239,8 @@ nav{
       text-align: right;
     }
     a{
+      @extend %link-white;
       line-height: 1.5rem;
-      text-decoration: none;
-      color: white;
-      font-weight: normal;
     }
 
     .searchform{ /*header nav search form*/
@@ -270,9 +282,8 @@ nav{
     @extend %horizontal-nav;
     color: white;
     a{
-      color: white;
+      @extend %link-white;
       line-height: 1.5rem;
-      text-decoration: none;
     }
   }
 }
@@ -313,9 +324,7 @@ article{
       margin: 20px;
 
       a{
-        color: white !important;
-        text-decoration: none;
-        font-weight: normal;
+        @extend %link-white;
       }
 
       .entry-title{
@@ -392,6 +401,132 @@ article{
   }
 
 }
+
+/***********************************
+
+Comment Area
+
+***********************************/
+
+#comments{
+  color: $color-text;
+  margin: 0 40px;
+}
+
+.comments-title{
+  text-align: center;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  padding: 10px;
+}
+
+.comment-list{
+  @extend %reset-basic;
+  list-style-type: none;
+}
+
+.comment-author{
+
+  border-top: dotted 1px $color-primary-light;
+  padding-top: 10px;
+
+  .says{
+    display:none;
+  }
+
+  img{
+    border-radius: 74px;
+    border: solid 4px $color-primary-light;
+    float: left;
+    margin: 0 10px 0 0;
+    width: 43px;
+    height: 43px;
+  }
+  a{
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  .depth-1 > .comment-body > &{
+    text-align:center;
+    font-size: 18px;
+    background-color: $color-primary-light;
+    color: white;
+
+    padding-top: 20px;
+    position: relative;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    img{
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      width: 74px;
+      height: 74px;
+      left: 50%;
+      bottom: -105px;
+      margin-left: -37px;
+    }
+
+    a{
+      @extend %link-white;
+    }
+  }
+}
+
+.comment-meta{
+  border-bottom: dotted 1px $color-primary-light;
+  padding-bottom: 10px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  a{
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  & ~ *{
+    margin: 0 10px 0 60px;
+    font-size: smaller;
+  }
+
+  .depth-1 > .comment-body > &{
+    text-align: center;
+    background-color: $color-primary-light;
+    padding-bottom: 40px;
+    margin-bottom: 45px;
+    a{
+      @extend %link-white;
+    }
+
+    & ~ *{
+      margin: 0 30px;
+    }
+  }
+}
+
+.reply{
+  text-align: right;
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+  a{
+    @extend .button;
+  }
+}
+
+.children{
+  list-style-type: none;
+  padding: 0 0 0 30px;
+  .comment-body{
+    margin: 0 20px 0 0;
+  }
+
+  &  &{
+    padding-left: 60px;
+  }
+}
+
 
 /***********************************
 
