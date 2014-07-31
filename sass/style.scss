@@ -78,6 +78,7 @@ li{
 
 iframe{
   margin: 0 auto;
+  display: block;
 }
 
 input{
@@ -109,6 +110,8 @@ input{
   -webkit-border-radius:4px;
   border-radius:4px;
   border:1px solid #268a16;
+  height: 34px;
+  box-sizing: border-box;
 
   display:inline-block;
   cursor:pointer;
@@ -408,6 +411,19 @@ Comment Area
 
 ***********************************/
 
+%author-mark{
+  content: "Author";
+  background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/checkmark.svg");
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  background-position: left;
+  margin-left: 15px;
+  font-size: 13px;
+  color: $color-primary-highlight;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 #comments{
   color: $color-text;
   margin: 0 40px;
@@ -442,9 +458,40 @@ Comment Area
     width: 43px;
     height: 43px;
   }
-  a{
+  a, .fn{
     text-decoration: none;
     font-style: normal;
+  }
+
+  .bypostauthor &{
+    .fn{
+      &:after{
+        @extend %author-mark;
+      }
+    }
+  }
+
+  .depth-1.bypostauthor &{
+    .fn{
+      &:after{
+        display: none;
+      }
+    }
+  }
+
+  .depth-1.bypostauthor > .comment-body > &{
+    &:after{
+      @extend %author-mark;
+      position: absolute;
+      bottom: -105px;
+      left: 51.5%;
+      background-position: 3px;
+      padding-right: 6px;
+      border-radius: 3px;
+      background-color: $color-primary-highlight;
+      color: white;
+      background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/checkmark-white.svg");
+    }
   }
 
   .depth-1 > .comment-body > &{
@@ -456,8 +503,8 @@ Comment Area
     padding-top: 20px;
     position: relative;
 
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
     img{
       display: block;
@@ -488,7 +535,7 @@ Comment Area
 
   & ~ *{
     margin: 0 10px 0 60px;
-    font-size: smaller;
+    font-size: small;
   }
 
   .depth-1 > .comment-body > &{
