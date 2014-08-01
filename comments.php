@@ -44,6 +44,17 @@
 
 <?php endif; // have_comments() ?>
 
-<?php comment_form(); ?>
+<?php
+
+$fields =  array(
+    'logged_in_as' =>
+        '<p class="logged-in-as">' .
+        sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account" class="button-logout" >Log out?</a>' ),
+            admin_url( 'profile.php' ),
+            $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>'
+);
+
+    comment_form($fields);
+?>
 
 </div><!-- #comments -->

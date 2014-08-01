@@ -16,11 +16,15 @@ $color-primary: #13531a;
 $color-primary-light: #136E1A;
 $color-primary-accent: #5cb811;
 $color-primary-highlight: #77d42a;
-$color-border: #555;
+
 $color-shadow-green: #caefab;
 
-$color-text: black;
+$color-text: #333;
+$color-border: #555;
 
+$color-secondary-dark: #3b3b3b;
+$color-secondary-light: #999;
+$color-secondary-highlight: #f7f7f7;
 /***********************************
 
 Resets
@@ -76,20 +80,48 @@ li{
   line-height: 1.5em;
 }
 
+/* Embed Related */
+
 iframe{
   margin: 0 auto;
   display: block;
 }
 
-input{
+/* Form Related */
+
+%form-element{
   border-radius: 4px;
   border-width: 1px;
   font-size: 16px;
+  border-color: $color-secondary-light;
+
+  &:focus{
+    outline-color: $color-shadow-green;
+  }
+}
+form{
+  background: $color-secondary-highlight;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+label{
+  display: block;
+}
+
+input{
+  @extend %form-element;
   padding-left: 5px;
   color: $color-border;
   &[type="text"]{
     height: 24px;
   }
+}
+
+textarea{
+  @extend %form-element;
+  width: 100%;
+
 }
 
 .button, input[type="submit"]{
@@ -140,6 +172,50 @@ input{
     }
 }
 
+.button-secondary {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0f0f0), color-stop(1, #cccccc));
+  background:-moz-linear-gradient(top, #f0f0f0 5%, #cccccc 100%);
+  background:-webkit-linear-gradient(top, #f0f0f0 5%, #cccccc 100%);
+  background:-o-linear-gradient(top, #f0f0f0 5%, #cccccc 100%);
+  background:-ms-linear-gradient(top, #f0f0f0 5%, #cccccc 100%);
+  background:linear-gradient(to bottom, #f0f0f0 5%, #cccccc 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#cccccc',GradientType=0);
+  background-color:#f0f0f0;
+  -moz-border-radius:42px;
+  -webkit-border-radius:42px;
+  border-radius:42px;
+  border:1px solid #c7c7c7;
+  display:inline-block;
+  cursor:pointer;
+  color:#5c5c5c;
+  font-family:arial;
+  font-size:11px;
+  font-weight:bold;
+  padding: 2px 12px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  text-transform: capitalize;
+
+  &:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #f0f0f0));
+    background:-moz-linear-gradient(top, #cccccc 5%, #f0f0f0 100%);
+    background:-webkit-linear-gradient(top, #cccccc 5%, #f0f0f0 100%);
+    background:-o-linear-gradient(top, #cccccc 5%, #f0f0f0 100%);
+    background:-ms-linear-gradient(top, #cccccc 5%, #f0f0f0 100%);
+    background:linear-gradient(to bottom, #cccccc 5%, #f0f0f0 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#f0f0f0',GradientType=0);
+    background-color:#cccccc;
+    color:#5c5c5c;
+
+    &:active {
+      position:relative;
+      top:1px;
+    }
+  }
+}
 
 /* position related */
 
@@ -249,6 +325,8 @@ nav{
     .searchform{ /*header nav search form*/
       float: right;
       margin: 14px 15px 14px 10px;
+      background: transparent;
+      padding: 0;
 
       input[type="text"] {
         background-color: transparent;
@@ -267,7 +345,7 @@ nav{
         width: 0;
 
         &:focus {
-          background-color: #fff;
+          background-color: white;
           border: 1px solid $color-border;
           cursor: text;
           outline: 0;
@@ -427,13 +505,17 @@ Comment Area
 #comments{
   color: $color-text;
   margin: 0 40px;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 }
 
 .comments-title{
   text-align: center;
-  border-top: 1px solid $color-border;
-  border-bottom: 1px solid $color-border;
+  border-top: dotted 1px $color-primary-light;
+  border-bottom: dotted 1px $color-primary-light;
   padding: 10px;
+  color: $color-primary;
 }
 
 .comment-list{
@@ -562,6 +644,11 @@ Comment Area
   }
 }
 
+#cancel-comment-reply-link, .button-logout{
+  @extend .button-secondary;
+  margin-left: 15px;
+}
+
 .children{
   list-style-type: none;
   padding: 0 0 0 30px;
@@ -574,6 +661,9 @@ Comment Area
   }
 }
 
+#respond{
+
+}
 
 /***********************************
 
@@ -584,13 +674,13 @@ Footer Content
 ***********************************/
 
 #site-footer{
-  background-color: #3b3b3b;
+  background-color: $color-secondary-dark;
   text-align: center;
   font-size: 0.8rem;
 
   #footer-content-area{
     .copyright{
-      color: #999;
+      color: $color-secondary-light;
       font-size: 0.8rem;
 
     }
