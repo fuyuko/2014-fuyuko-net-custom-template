@@ -16,7 +16,7 @@ function fuyuko_net_scripts_styles(){
     // Loads our main stylesheet.
     wp_enqueue_style( '2014_fuyuko_net_style', get_stylesheet_uri(), array(), '2017-07-28' );
     wp_enqueue_script( 'jquery' );
-    //wp_enqueue_script( '2014_fuyuko_net_masonry', get_template_directory_uri() . '/js/masonry.pkgd.js');
+    wp_enqueue_script( '2014_fuyuko_net_gridlayout', get_template_directory_uri() . '/js/grid-layout.js', 'jquery');
 }
 add_action( 'wp_enqueue_scripts', 'fuyuko_net_scripts_styles' );
 
