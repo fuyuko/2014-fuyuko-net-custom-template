@@ -15,8 +15,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Resets
 
 ***********************************/
-/* line 34, sass/style.scss */
-html, body, .comment-list {
+/* line 36, sass/style.scss */
+html, body, #header-content-area #site-title, #header-content-area #site-description, .comment-list {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -28,76 +28,77 @@ html, body, .comment-list {
 General Structure
 
 ***********************************/
-/* line 50, sass/style.scss */
+/* line 52, sass/style.scss */
 html, body {
-  font-family: "Open Sans", Helvetica, sans-serif; }
+  font-family: "Open Sans", Helvetica, sans-serif;
+  margin-top: 75px; }
 
-/* line 55, sass/style.scss */
+/* line 58, sass/style.scss */
 p {
   margin: 1rem 0;
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
 
 /* Link Related */
-/* line 63, sass/style.scss */
+/* line 66, sass/style.scss */
 nav#header-nav a, nav#footer-nav a, article .entry-thumbnail .entry-header-text a, .depth-1 > .comment-body > .comment-author a, .depth-1 > .comment-body > .comment-meta a {
   color: white;
   text-decoration: none;
   font-weight: normal; }
 
-/* line 69, sass/style.scss */
+/* line 72, sass/style.scss */
 a {
   color: #13531a;
   font-weight: bold; }
-  /* line 72, sass/style.scss */
+  /* line 75, sass/style.scss */
   a:hover {
     color: #5cb811; }
 
 /* List Related */
-/* line 79, sass/style.scss */
+/* line 82, sass/style.scss */
 li {
   line-height: 1.5em; }
 
 /* Embed Related */
-/* line 85, sass/style.scss */
+/* line 88, sass/style.scss */
 iframe {
   margin: 0 auto;
   display: block; }
 
 /* Form Related */
-/* line 92, sass/style.scss */
+/* line 95, sass/style.scss */
 input, textarea {
   border-radius: 4px;
   border-width: 1px;
   font-size: 16px;
   border-color: #999999; }
-  /* line 98, sass/style.scss */
+  /* line 101, sass/style.scss */
   input:focus, textarea:focus {
     outline-color: #caefab; }
 
-/* line 102, sass/style.scss */
+/* line 105, sass/style.scss */
 form {
   background: #f7f7f7;
   padding: 10px 20px;
   border-radius: 10px; }
 
-/* line 108, sass/style.scss */
+/* line 111, sass/style.scss */
 label {
   display: block; }
 
-/* line 112, sass/style.scss */
+/* line 115, sass/style.scss */
 input {
   padding-left: 5px;
   color: #555555; }
-  /* line 116, sass/style.scss */
+  /* line 119, sass/style.scss */
   input[type="text"] {
     height: 24px; }
 
-/* line 121, sass/style.scss */
+/* line 124, sass/style.scss */
 textarea {
   width: 100%; }
 
-/* line 127, sass/style.scss */
+/* line 130, sass/style.scss */
 .button, .reply a, input[type="submit"] {
   -moz-box-shadow: inset 0px 1px 0px 0px #caefab;
   -webkit-box-shadow: inset 0px 1px 0px 0px #caefab;
@@ -124,7 +125,7 @@ textarea {
   padding: 4px 20px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #caefab; }
-  /* line 158, sass/style.scss */
+  /* line 161, sass/style.scss */
   .button:hover, .reply a:hover, input[type="submit"]:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a));
     background: -moz-linear-gradient(top, #5cb811 5%, #77d42a 100%);
@@ -134,12 +135,12 @@ textarea {
     background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a',GradientType=0);
     background-color: #5cb811; }
-  /* line 169, sass/style.scss */
+  /* line 172, sass/style.scss */
   .button:active, .reply a:active, input[type="submit"]:active {
     position: relative;
     top: 1px; }
 
-/* line 175, sass/style.scss */
+/* line 178, sass/style.scss */
 .button-secondary, #cancel-comment-reply-link, .button-logout {
   -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -166,7 +167,7 @@ textarea {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   text-transform: capitalize; }
-  /* line 202, sass/style.scss */
+  /* line 205, sass/style.scss */
   .button-secondary:hover, #cancel-comment-reply-link:hover, .button-logout:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #f0f0f0));
     background: -moz-linear-gradient(top, #cccccc 5%, #f0f0f0 100%);
@@ -177,38 +178,38 @@ textarea {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#f0f0f0',GradientType=0);
     background-color: #cccccc;
     color: #5c5c5c; }
-    /* line 213, sass/style.scss */
+    /* line 216, sass/style.scss */
     .button-secondary:hover:active, #cancel-comment-reply-link:hover:active, .button-logout:hover:active {
       position: relative;
       top: 1px; }
 
 /* position related */
-/* line 222, sass/style.scss */
+/* line 225, sass/style.scss */
 .content-wrapper, #header-nav-area .site-logo, article .entry-content, article .entry-meta {
   max-width: 1040px;
   margin: 0 auto;
   padding: 20px; }
 
 /*WP genarated classes*/
-/* line 230, sass/style.scss */
+/* line 233, sass/style.scss */
 .alignleft {
   float: left;
   padding: 0 10px 10px 0; }
 
-/* line 235, sass/style.scss */
+/* line 238, sass/style.scss */
 .alignright {
   float: right;
   padding: 0 0 10px 10px; }
 
-/* line 240, sass/style.scss */
+/* line 243, sass/style.scss */
 .aligncenter {
   display: block;
   margin: 5px auto 5px auto; }
 
-/* line 248, sass/style.scss */
+/* line 251, sass/style.scss */
 .wp-caption img {
   margin-bottom: 5px; }
-/* line 251, sass/style.scss */
+/* line 254, sass/style.scss */
 .wp-caption .wp-caption-text {
   font-weight: 300px;
   font-size: 0.8rem;
@@ -220,7 +221,7 @@ textarea {
 Site Header Area
 
 ***********************************/
-/* line 265, sass/style.scss */
+/* line 268, sass/style.scss */
 #header-nav-area {
   /*sticky navigation - http://xomisse.com/blog/create-a-sticky-navigation-when-scrolling-on-blogger/ */
   position: fixed;
@@ -228,55 +229,167 @@ Site Header Area
   left: 0px;
   z-index: 999;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.88);
   color: white; }
-  /* line 276, sass/style.scss */
+  /* line 279, sass/style.scss */
   #header-nav-area .site-logo {
     float: left;
     padding: 5px; }
-    /* line 280, sass/style.scss */
+    /* line 283, sass/style.scss */
     #header-nav-area .site-logo img {
       max-height: 60px; }
+
+/* grid header image area */
+/* line 293, sass/style.scss */
+#grid-header-image .wrapper {
+  background-color: #13531a;
+  position: relative; }
+
+/* line 300, sass/style.scss */
+#grids {
+  width: 100%;
+  opacity: 0.5; }
+
+/* line 305, sass/style.scss */
+.grid {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden; }
+  /* line 311, sass/style.scss */
+  .grid img {
+    width: 100%; }
+
+/* line 321, sass/style.scss */
+.row-1 {
+  clear: both;
+  width: 100%; }
+
+/* line 327, sass/style.scss */
+.column-1 {
+  float: left;
+  width: 10%;
+  height: 100%; }
+
+/* line 321, sass/style.scss */
+.row-2 {
+  clear: both;
+  width: 100%; }
+
+/* line 327, sass/style.scss */
+.column-2 {
+  float: left;
+  width: 20%;
+  height: 100%; }
+
+/* line 321, sass/style.scss */
+.row-3 {
+  clear: both;
+  width: 100%; }
+
+/* line 327, sass/style.scss */
+.column-3 {
+  float: left;
+  width: 30.0%;
+  height: 100%; }
+
+/* line 327, sass/style.scss */
+.column-4 {
+  float: left;
+  width: 40%;
+  height: 100%; }
+
+/* line 327, sass/style.scss */
+.column-5 {
+  float: left;
+  width: 50%;
+  height: 100%; }
+
+/* line 327, sass/style.scss */
+.column-6 {
+  float: left;
+  width: 60.0%;
+  height: 100%; }
+
+/* line 327, sass/style.scss */
+.column-7 {
+  float: left;
+  width: 70%;
+  height: 100%; }
+
+/* line 327, sass/style.scss */
+.column-8 {
+  float: left;
+  width: 80%;
+  height: 100%; }
+
+/* line 327, sass/style.scss */
+.column-9 {
+  float: left;
+  width: 90%;
+  height: 100%; }
+
+/* line 327, sass/style.scss */
+.column-10 {
+  float: left;
+  width: 100%;
+  height: 100%; }
+
+/* line 335, sass/style.scss */
+#grid-11 img, #grid-16 img {
+  height: 100%;
+  width: 200%; }
+
+/* site title */
+/* line 342, sass/style.scss */
+#header-content-area {
+  position: absolute;
+  bottom: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.88);
+  padding: 20px;
+  width: 100%;
+  text-align: center; }
 
 /***********************************
 
 Navigation
 
 ***********************************/
-/* line 292, sass/style.scss */
+/* line 366, sass/style.scss */
 nav#header-nav li, nav#footer-nav li {
   display: inline-block;
   position: relative; }
-  /* line 296, sass/style.scss */
+  /* line 370, sass/style.scss */
   nav#header-nav li ul, nav#footer-nav li ul {
     display: none; }
-  /* line 300, sass/style.scss */
+  /* line 374, sass/style.scss */
   nav#header-nav li + li:before, nav#footer-nav li + li:before {
     content: " | ";
     padding: 0 10px; }
 
-/* line 308, sass/style.scss */
+/* line 382, sass/style.scss */
 nav ul {
   list-style: none;
   /* reset */ }
-/* line 313, sass/style.scss */
+/* line 387, sass/style.scss */
 nav#header-nav {
   /*header navigation*/
   padding-top: 8px; }
-  /* line 317, sass/style.scss */
+  /* line 391, sass/style.scss */
   nav#header-nav ul {
     text-align: right; }
-  /* line 320, sass/style.scss */
+  /* line 394, sass/style.scss */
   nav#header-nav a {
     line-height: 1.5rem; }
-  /* line 325, sass/style.scss */
+  /* line 399, sass/style.scss */
   nav#header-nav .searchform {
     /*header nav search form*/
     float: right;
     margin: 14px 15px 14px 10px;
     background: transparent;
     padding: 0; }
-    /* line 331, sass/style.scss */
+    /* line 405, sass/style.scss */
     nav#header-nav .searchform input[type="text"] {
       background-color: transparent;
       background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/search.svg");
@@ -292,21 +405,21 @@ nav#header-nav {
       -webkit-transition: width 400ms ease, background 400ms ease;
       transition: width 400ms ease, background 400ms ease;
       width: 0; }
-      /* line 347, sass/style.scss */
+      /* line 421, sass/style.scss */
       nav#header-nav .searchform input[type="text"]:focus {
         background-color: white;
         border: 1px solid #555555;
         cursor: text;
         outline: 0;
         width: 180px; }
-    /* line 356, sass/style.scss */
+    /* line 430, sass/style.scss */
     nav#header-nav .searchform label, nav#header-nav .searchform input[type="submit"] {
       display: none; }
-/* line 362, sass/style.scss */
+/* line 436, sass/style.scss */
 nav#footer-nav {
   /*footer navigation*/
   color: white; }
-  /* line 365, sass/style.scss */
+  /* line 439, sass/style.scss */
   nav#footer-nav a {
     line-height: 1.5rem; }
 
@@ -315,19 +428,19 @@ nav#footer-nav {
 Entry Content
 
 ***********************************/
-/* line 377, sass/style.scss */
+/* line 451, sass/style.scss */
 .wp-caption, article img {
   max-width: 100% !important;
   height: auto !important; }
 
-/* line 382, sass/style.scss */
+/* line 456, sass/style.scss */
 article .entry-meta .edit-link a:before, article .entry-meta .categories-links:before, article .entry-meta .tags-links:before, article .entry-meta .comments-link a:before {
   margin-left: 20px;
   margin-right: 10px;
   width: 14px;
   height: 14px; }
 
-/* line 390, sass/style.scss */
+/* line 464, sass/style.scss */
 article .entry-thumbnail {
   width: 100%;
   min-height: 350px;
@@ -338,10 +451,10 @@ article .entry-thumbnail {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center; }
-  /* line 404, sass/style.scss */
+  /* line 478, sass/style.scss */
   article .entry-thumbnail .entry-header-text {
     margin: 20px; }
-    /* line 411, sass/style.scss */
+    /* line 485, sass/style.scss */
     article .entry-thumbnail .entry-header-text .entry-title {
       margin: 30px auto 0;
       width: 100%;
@@ -350,29 +463,29 @@ article .entry-thumbnail {
       word-wrap: break-word;
       color: white;
       text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; }
-      /* line 420, sass/style.scss */
+      /* line 494, sass/style.scss */
       article .entry-thumbnail .entry-header-text .entry-title a {
         text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; }
-/* line 433, sass/style.scss */
+/* line 507, sass/style.scss */
 article .entry-meta {
   color: white;
   line-height: 1.4em; }
-  /* line 438, sass/style.scss */
+  /* line 512, sass/style.scss */
   article .entry-meta .date {
     margin-bottom: 10px; }
-  /* line 444, sass/style.scss */
+  /* line 518, sass/style.scss */
   article .entry-meta .edit-link a:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/pencil.svg"); }
-  /* line 452, sass/style.scss */
+  /* line 526, sass/style.scss */
   article .entry-meta .categories-links:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/folder-open.svg"); }
-  /* line 459, sass/style.scss */
+  /* line 533, sass/style.scss */
   article .entry-meta .tags-links:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/tag.svg"); }
-  /* line 467, sass/style.scss */
+  /* line 541, sass/style.scss */
   article .entry-meta .comments-link a:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/bubbles.svg"); }
-/* line 475, sass/style.scss */
+/* line 549, sass/style.scss */
 article .twitter-tweet {
   margin: 0 auto !important; }
 
@@ -381,7 +494,7 @@ article .twitter-tweet {
 Comment Area
 
 ***********************************/
-/* line 492, sass/style.scss */
+/* line 566, sass/style.scss */
 .bypostauthor .comment-author .fn:after, .depth-1.bypostauthor > .comment-body > .comment-author:after {
   content: "Author";
   background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/checkmark.svg");
@@ -394,16 +507,16 @@ Comment Area
   font-weight: bold;
   text-transform: uppercase; }
 
-/* line 505, sass/style.scss */
+/* line 579, sass/style.scss */
 #comments {
   color: #333333;
   margin: 0 40px; }
   @media (max-width: 768px) {
-    /* line 505, sass/style.scss */
+    /* line 579, sass/style.scss */
     #comments {
       margin: 0; } }
 
-/* line 513, sass/style.scss */
+/* line 587, sass/style.scss */
 .comments-title {
   text-align: center;
   border-top: dotted 1px #136e1a;
@@ -411,18 +524,18 @@ Comment Area
   padding: 10px;
   color: #13531a; }
 
-/* line 521, sass/style.scss */
+/* line 595, sass/style.scss */
 .comment-list {
   list-style-type: none; }
 
-/* line 526, sass/style.scss */
+/* line 600, sass/style.scss */
 .comment-author {
   border-top: dotted 1px #136e1a;
   padding-top: 10px; }
-  /* line 531, sass/style.scss */
+  /* line 605, sass/style.scss */
   .comment-author .says {
     display: none; }
-  /* line 535, sass/style.scss */
+  /* line 609, sass/style.scss */
   .comment-author img {
     border-radius: 74px;
     border: solid 4px #136e1a;
@@ -430,14 +543,14 @@ Comment Area
     margin: 0 10px 0 0;
     width: 43px;
     height: 43px; }
-  /* line 543, sass/style.scss */
+  /* line 617, sass/style.scss */
   .comment-author a, .comment-author .fn {
     text-decoration: none;
     font-style: normal; }
-  /* line 558, sass/style.scss */
+  /* line 632, sass/style.scss */
   .depth-1.bypostauthor .comment-author .fn:after {
     display: none; }
-  /* line 565, sass/style.scss */
+  /* line 639, sass/style.scss */
   .depth-1.bypostauthor > .comment-body > .comment-author:after {
     position: absolute;
     bottom: -105px;
@@ -448,7 +561,7 @@ Comment Area
     background-color: #77d42a;
     color: white;
     background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/checkmark-white.svg"); }
-  /* line 579, sass/style.scss */
+  /* line 653, sass/style.scss */
   .depth-1 > .comment-body > .comment-author {
     text-align: center;
     font-size: 18px;
@@ -458,7 +571,7 @@ Comment Area
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
-    /* line 591, sass/style.scss */
+    /* line 665, sass/style.scss */
     .depth-1 > .comment-body > .comment-author img {
       display: block;
       margin: 0 auto;
@@ -469,48 +582,48 @@ Comment Area
       bottom: -105px;
       margin-left: -37px; }
 
-/* line 608, sass/style.scss */
+/* line 682, sass/style.scss */
 .comment-meta {
   border-bottom: dotted 1px #136e1a;
   padding-bottom: 10px;
   font-size: 12px;
   margin-bottom: 20px; }
-  /* line 613, sass/style.scss */
+  /* line 687, sass/style.scss */
   .comment-meta a {
     text-decoration: none;
     font-style: normal; }
-  /* line 618, sass/style.scss */
+  /* line 692, sass/style.scss */
   .comment-meta ~ * {
     margin: 0 10px 0 60px;
     font-size: small; }
-  /* line 623, sass/style.scss */
+  /* line 697, sass/style.scss */
   .depth-1 > .comment-body > .comment-meta {
     text-align: center;
     background-color: #136e1a;
     padding-bottom: 40px;
     margin-bottom: 45px; }
-    /* line 632, sass/style.scss */
+    /* line 706, sass/style.scss */
     .depth-1 > .comment-body > .comment-meta ~ * {
       margin: 0 30px; }
 
-/* line 638, sass/style.scss */
+/* line 712, sass/style.scss */
 .reply {
   text-align: right;
   margin-top: 10px !important;
   margin-bottom: 20px !important; }
 
-/* line 647, sass/style.scss */
+/* line 721, sass/style.scss */
 #cancel-comment-reply-link, .button-logout {
   margin-left: 15px; }
 
-/* line 652, sass/style.scss */
+/* line 726, sass/style.scss */
 .children {
   list-style-type: none;
   padding: 0 0 0 30px; }
-  /* line 655, sass/style.scss */
+  /* line 729, sass/style.scss */
   .children .comment-body {
     margin: 0 20px 0 0; }
-  /* line 659, sass/style.scss */
+  /* line 733, sass/style.scss */
   .children .children {
     padding-left: 60px; }
 
@@ -521,12 +634,12 @@ Footer Content
 * For Footer Navigation see Navigation Section
 
 ***********************************/
-/* line 676, sass/style.scss */
+/* line 750, sass/style.scss */
 #site-footer {
   background-color: #3b3b3b;
   text-align: center;
   font-size: 0.8rem; }
-  /* line 682, sass/style.scss */
+  /* line 756, sass/style.scss */
   #site-footer #footer-content-area .copyright {
     color: #999999;
     font-size: 0.8rem; }
