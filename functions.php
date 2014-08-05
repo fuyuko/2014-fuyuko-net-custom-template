@@ -83,5 +83,13 @@ function fuyuko_net_customize_setup( $wp_customize ) {
         'section'  => 'fuyuko_net_logo_section',
         'settings' => 'fuyuko_net_header_bg',
     ) ) );
+
+    //Site Headline - fuyuko_net_header_headline
+    $wp_customize->add_setting( 'fuyuko_net_header_headline');
+    $wp_customize->add_control('uyuko_net_header_headline', array(
+        'label'      => __('Site Headline', '2014_fuyuko_net'),
+        'section'    => 'fuyuko_net_logo_section',
+        'settings'   => 'fuyuko_net_header_headline'
+    ));
 }
 add_action( 'customize_register', 'fuyuko_net_customize_setup' );

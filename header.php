@@ -48,8 +48,10 @@
             <div id="grid-header-image" class="container">
                 <div class="wrapper">
                     <?php include('header-grid.php'); ?>
+                    <div id="site-headline"><?php echo get_theme_mod( 'fuyuko_net_header_headline' ); ?></div>
                     <div id="header-content-area">
                         <hgroup>
+                            <img class="site-logo" src='<?php echo esc_url( get_theme_mod( 'fuyuko_net_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
                             <h1 id="site-title"><?php bloginfo( 'name' ); ?></h1>
                             <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
                         </hgroup>

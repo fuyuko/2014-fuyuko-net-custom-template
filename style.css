@@ -16,7 +16,7 @@ Resets
 
 ***********************************/
 /* line 36, sass/style.scss */
-html, body, #header-content-area #site-title, #header-content-area #site-description, .comment-list {
+html, body, #header-content-area hgroup #site-title, #header-content-area hgroup #site-description, .comment-list {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -340,56 +340,76 @@ Site Header Area
   height: 100%;
   width: 200%; }
 
-/* site title */
-/* line 342, sass/style.scss */
-#header-content-area {
+/* site headline */
+/* line 343, sass/style.scss */
+#site-headline, #header-content-area {
   position: absolute;
-  bottom: 40px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.88);
-  padding: 20px;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  color: white; }
+
+/* line 350, sass/style.scss */
+#site-headline {
+  bottom: 180px;
+  font-size: 60px; }
+
+/* site title */
+/* line 357, sass/style.scss */
+#header-content-area {
+  bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.88);
+  padding: 20px; }
+  /* line 363, sass/style.scss */
+  #header-content-area hgroup {
+    position: relative;
+    display: inline-block; }
+    /* line 368, sass/style.scss */
+    #header-content-area hgroup .site-logo {
+      height: 70px;
+      position: absolute;
+      left: -70%;
+      top: -27%;
+      border-radius: 70px; }
 
 /***********************************
 
 Navigation
 
 ***********************************/
-/* line 366, sass/style.scss */
+/* line 395, sass/style.scss */
 nav#header-nav li, nav#footer-nav li {
   display: inline-block;
   position: relative; }
-  /* line 370, sass/style.scss */
+  /* line 399, sass/style.scss */
   nav#header-nav li ul, nav#footer-nav li ul {
     display: none; }
-  /* line 374, sass/style.scss */
+  /* line 403, sass/style.scss */
   nav#header-nav li + li:before, nav#footer-nav li + li:before {
     content: " | ";
     padding: 0 10px; }
 
-/* line 382, sass/style.scss */
+/* line 411, sass/style.scss */
 nav ul {
   list-style: none;
   /* reset */ }
-/* line 387, sass/style.scss */
+/* line 416, sass/style.scss */
 nav#header-nav {
   /*header navigation*/
   padding-top: 8px; }
-  /* line 391, sass/style.scss */
+  /* line 420, sass/style.scss */
   nav#header-nav ul {
     text-align: right; }
-  /* line 394, sass/style.scss */
+  /* line 423, sass/style.scss */
   nav#header-nav a {
     line-height: 1.5rem; }
-  /* line 399, sass/style.scss */
+  /* line 428, sass/style.scss */
   nav#header-nav .searchform {
     /*header nav search form*/
     float: right;
     margin: 14px 15px 14px 10px;
     background: transparent;
     padding: 0; }
-    /* line 405, sass/style.scss */
+    /* line 434, sass/style.scss */
     nav#header-nav .searchform input[type="text"] {
       background-color: transparent;
       background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/search.svg");
@@ -405,21 +425,21 @@ nav#header-nav {
       -webkit-transition: width 400ms ease, background 400ms ease;
       transition: width 400ms ease, background 400ms ease;
       width: 0; }
-      /* line 421, sass/style.scss */
+      /* line 450, sass/style.scss */
       nav#header-nav .searchform input[type="text"]:focus {
         background-color: white;
         border: 1px solid #555555;
         cursor: text;
         outline: 0;
         width: 180px; }
-    /* line 430, sass/style.scss */
+    /* line 459, sass/style.scss */
     nav#header-nav .searchform label, nav#header-nav .searchform input[type="submit"] {
       display: none; }
-/* line 436, sass/style.scss */
+/* line 465, sass/style.scss */
 nav#footer-nav {
   /*footer navigation*/
   color: white; }
-  /* line 439, sass/style.scss */
+  /* line 468, sass/style.scss */
   nav#footer-nav a {
     line-height: 1.5rem; }
 
@@ -428,19 +448,19 @@ nav#footer-nav {
 Entry Content
 
 ***********************************/
-/* line 451, sass/style.scss */
+/* line 480, sass/style.scss */
 .wp-caption, article img {
   max-width: 100% !important;
   height: auto !important; }
 
-/* line 456, sass/style.scss */
+/* line 485, sass/style.scss */
 article .entry-meta .edit-link a:before, article .entry-meta .categories-links:before, article .entry-meta .tags-links:before, article .entry-meta .comments-link a:before {
   margin-left: 20px;
   margin-right: 10px;
   width: 14px;
   height: 14px; }
 
-/* line 464, sass/style.scss */
+/* line 493, sass/style.scss */
 article .entry-thumbnail {
   width: 100%;
   min-height: 350px;
@@ -451,10 +471,10 @@ article .entry-thumbnail {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center; }
-  /* line 478, sass/style.scss */
+  /* line 507, sass/style.scss */
   article .entry-thumbnail .entry-header-text {
     margin: 20px; }
-    /* line 485, sass/style.scss */
+    /* line 514, sass/style.scss */
     article .entry-thumbnail .entry-header-text .entry-title {
       margin: 30px auto 0;
       width: 100%;
@@ -463,29 +483,29 @@ article .entry-thumbnail {
       word-wrap: break-word;
       color: white;
       text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; }
-      /* line 494, sass/style.scss */
+      /* line 523, sass/style.scss */
       article .entry-thumbnail .entry-header-text .entry-title a {
         text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; }
-/* line 507, sass/style.scss */
+/* line 536, sass/style.scss */
 article .entry-meta {
   color: white;
   line-height: 1.4em; }
-  /* line 512, sass/style.scss */
+  /* line 541, sass/style.scss */
   article .entry-meta .date {
     margin-bottom: 10px; }
-  /* line 518, sass/style.scss */
+  /* line 547, sass/style.scss */
   article .entry-meta .edit-link a:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/pencil.svg"); }
-  /* line 526, sass/style.scss */
+  /* line 555, sass/style.scss */
   article .entry-meta .categories-links:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/folder-open.svg"); }
-  /* line 533, sass/style.scss */
+  /* line 562, sass/style.scss */
   article .entry-meta .tags-links:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/tag.svg"); }
-  /* line 541, sass/style.scss */
+  /* line 570, sass/style.scss */
   article .entry-meta .comments-link a:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/bubbles.svg"); }
-/* line 549, sass/style.scss */
+/* line 578, sass/style.scss */
 article .twitter-tweet {
   margin: 0 auto !important; }
 
@@ -494,7 +514,7 @@ article .twitter-tweet {
 Comment Area
 
 ***********************************/
-/* line 566, sass/style.scss */
+/* line 595, sass/style.scss */
 .bypostauthor .comment-author .fn:after, .depth-1.bypostauthor > .comment-body > .comment-author:after {
   content: "Author";
   background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/checkmark.svg");
@@ -507,16 +527,16 @@ Comment Area
   font-weight: bold;
   text-transform: uppercase; }
 
-/* line 579, sass/style.scss */
+/* line 608, sass/style.scss */
 #comments {
   color: #333333;
   margin: 0 40px; }
   @media (max-width: 768px) {
-    /* line 579, sass/style.scss */
+    /* line 608, sass/style.scss */
     #comments {
       margin: 0; } }
 
-/* line 587, sass/style.scss */
+/* line 616, sass/style.scss */
 .comments-title {
   text-align: center;
   border-top: dotted 1px #136e1a;
@@ -524,18 +544,18 @@ Comment Area
   padding: 10px;
   color: #13531a; }
 
-/* line 595, sass/style.scss */
+/* line 624, sass/style.scss */
 .comment-list {
   list-style-type: none; }
 
-/* line 600, sass/style.scss */
+/* line 629, sass/style.scss */
 .comment-author {
   border-top: dotted 1px #136e1a;
   padding-top: 10px; }
-  /* line 605, sass/style.scss */
+  /* line 634, sass/style.scss */
   .comment-author .says {
     display: none; }
-  /* line 609, sass/style.scss */
+  /* line 638, sass/style.scss */
   .comment-author img {
     border-radius: 74px;
     border: solid 4px #136e1a;
@@ -543,14 +563,14 @@ Comment Area
     margin: 0 10px 0 0;
     width: 43px;
     height: 43px; }
-  /* line 617, sass/style.scss */
+  /* line 646, sass/style.scss */
   .comment-author a, .comment-author .fn {
     text-decoration: none;
     font-style: normal; }
-  /* line 632, sass/style.scss */
+  /* line 661, sass/style.scss */
   .depth-1.bypostauthor .comment-author .fn:after {
     display: none; }
-  /* line 639, sass/style.scss */
+  /* line 668, sass/style.scss */
   .depth-1.bypostauthor > .comment-body > .comment-author:after {
     position: absolute;
     bottom: -105px;
@@ -561,7 +581,7 @@ Comment Area
     background-color: #77d42a;
     color: white;
     background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/checkmark-white.svg"); }
-  /* line 653, sass/style.scss */
+  /* line 682, sass/style.scss */
   .depth-1 > .comment-body > .comment-author {
     text-align: center;
     font-size: 18px;
@@ -571,7 +591,7 @@ Comment Area
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
-    /* line 665, sass/style.scss */
+    /* line 694, sass/style.scss */
     .depth-1 > .comment-body > .comment-author img {
       display: block;
       margin: 0 auto;
@@ -582,48 +602,48 @@ Comment Area
       bottom: -105px;
       margin-left: -37px; }
 
-/* line 682, sass/style.scss */
+/* line 711, sass/style.scss */
 .comment-meta {
   border-bottom: dotted 1px #136e1a;
   padding-bottom: 10px;
   font-size: 12px;
   margin-bottom: 20px; }
-  /* line 687, sass/style.scss */
+  /* line 716, sass/style.scss */
   .comment-meta a {
     text-decoration: none;
     font-style: normal; }
-  /* line 692, sass/style.scss */
+  /* line 721, sass/style.scss */
   .comment-meta ~ * {
     margin: 0 10px 0 60px;
     font-size: small; }
-  /* line 697, sass/style.scss */
+  /* line 726, sass/style.scss */
   .depth-1 > .comment-body > .comment-meta {
     text-align: center;
     background-color: #136e1a;
     padding-bottom: 40px;
     margin-bottom: 45px; }
-    /* line 706, sass/style.scss */
+    /* line 735, sass/style.scss */
     .depth-1 > .comment-body > .comment-meta ~ * {
       margin: 0 30px; }
 
-/* line 712, sass/style.scss */
+/* line 741, sass/style.scss */
 .reply {
   text-align: right;
   margin-top: 10px !important;
   margin-bottom: 20px !important; }
 
-/* line 721, sass/style.scss */
+/* line 750, sass/style.scss */
 #cancel-comment-reply-link, .button-logout {
   margin-left: 15px; }
 
-/* line 726, sass/style.scss */
+/* line 755, sass/style.scss */
 .children {
   list-style-type: none;
   padding: 0 0 0 30px; }
-  /* line 729, sass/style.scss */
+  /* line 758, sass/style.scss */
   .children .comment-body {
     margin: 0 20px 0 0; }
-  /* line 733, sass/style.scss */
+  /* line 762, sass/style.scss */
   .children .children {
     padding-left: 60px; }
 
@@ -634,12 +654,12 @@ Footer Content
 * For Footer Navigation see Navigation Section
 
 ***********************************/
-/* line 750, sass/style.scss */
+/* line 779, sass/style.scss */
 #site-footer {
   background-color: #3b3b3b;
   text-align: center;
   font-size: 0.8rem; }
-  /* line 756, sass/style.scss */
+  /* line 785, sass/style.scss */
   #site-footer #footer-content-area .copyright {
     color: #999999;
     font-size: 0.8rem; }

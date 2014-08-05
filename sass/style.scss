@@ -338,23 +338,52 @@ Site Header Area
   }
 }
 
-/* site title */
-#header-content-area{
+/* site headline */
+
+%grid-inner-layout{
   position: absolute;
-  bottom: 40px;
-  color: white;
-  background-color: $color-transparent-black;
-  padding: 20px;
   width: 100%;
   text-align: center;
+  color: white;
+}
 
-  #site-title{
-    @extend %reset-basic;
+#site-headline{
+  @extend %grid-inner-layout;
+  bottom: 180px;
+  font-size: 60px;
+}
+
+/* site title */
+#header-content-area{
+  @extend %grid-inner-layout;
+  bottom: 60px;
+  background-color: $color-transparent-black;
+  padding: 20px;
+
+  hgroup{
+
+    position: relative;
+    display: inline-block;
+
+    .site-logo{
+      height: 70px;
+      position: absolute;
+      left: -70%;
+      top: -27%;
+      border-radius: 70px;
+    }
+
+    #site-title{
+      @extend %reset-basic;
+    }
+
+    #site-description{
+      @extend %reset-basic;
+    }
+
   }
 
-  #site-description{
-    @extend %reset-basic;
-  }
+
 }
 /***********************************
 
