@@ -15,8 +15,11 @@ Script & Stylesheet Management
 function fuyuko_net_scripts_styles(){
     // Loads our main stylesheet.
     wp_enqueue_style( '2014_fuyuko_net_style', get_stylesheet_uri(), array(), '2017-07-28' );
-    wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( '2014_fuyuko_net_gridlayout', get_template_directory_uri() . '/js/grid-layout.js', 'jquery');
+
+    if(is_home() || is_front_page()){ //grid-layout.js only needed for homepage site header
+        wp_enqueue_script( 'jquery' );
+        wp_enqueue_script( '2014_fuyuko_net_gridlayout', get_template_directory_uri() . '/js/grid-layout.js', 'jquery');
+    }
 }
 add_action( 'wp_enqueue_scripts', 'fuyuko_net_scripts_styles' );
 
@@ -44,6 +47,16 @@ function fuyuko_net_widgets_setup(){
         'name'          => __( 'Sidebar Widget Area - All Pages', '2014_fuyuko_net' ),
         'id'            => 'sidebar-all',
         'description'   => __( 'Appears Secondary Content Area for All Pages.', '2014_fuyuko_net' ),
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer Widget Area', '2014_fuyuko_net' ),
+        'id'            => 'sidebar-footer',
+        'description'   => __( 'Appears in Footer Area for All Pages.', '2014_fuyuko_net' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h3 class="widget-title">',

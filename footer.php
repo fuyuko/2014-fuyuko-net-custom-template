@@ -9,11 +9,16 @@
 ?>
         </div><!--end of #main (header.php) -->
         <footer id="site-footer" role="contentinfo">
-            <div id="footer-content-area" class="content-wrapper">
-                <nav id="footer-nav">
-                    <?php wp_nav_menu( array( 'theme_location' => 'footer-primary', 'menu_class' => 'nav-menu' ) ); ?>
-                </nav>
-                <p class="copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo( 'title' ); ?></p>
+            <?php get_sidebar('footer'); ?>
+            <div id="footer-content-area">
+                <section class="secondary content-wrapper">
+                    <p id="copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo( 'title' ); ?></p>
+                    <nav id="footer-nav">
+                        <?php wp_nav_menu( array( 'theme_location' => 'footer-primary', 'menu_class' => 'nav-menu' ) ); ?>
+                    </nav>
+
+                </section>
+
             </div>
         </footer>
     </div><!--end of #page (header.php) -->

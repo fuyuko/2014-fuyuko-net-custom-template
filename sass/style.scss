@@ -24,6 +24,7 @@ $color-border: #555;
 
 $color-secondary-dark: #3b3b3b;
 $color-secondary-light: #999;
+$color-secondary-accent: #ccc;
 $color-secondary-highlight: #f7f7f7;
 
 $color-transparent-black: rgba(0,0,0,0.88);
@@ -62,12 +63,6 @@ p{
 }
 
 /* Link Related */
-
-%link-white{
-  color: white;
-  text-decoration: none;
-  font-weight: normal;
-}
 
 a{
   color: $color-primary;
@@ -392,6 +387,11 @@ Navigation
 ***********************************/
 
 %horizontal-nav{
+  ul{
+    list-style:none; /* reset */
+    padding-left: 0;
+  }
+
   li{
     display: inline-block;
     position: relative;
@@ -402,76 +402,90 @@ Navigation
 
     &+li:before {
       content: " | ";
+    }
+
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+#header-nav{ /*header navigation*/
+  @extend %horizontal-nav;
+  padding-top: 8px;
+
+  ul{
+    text-align: right;
+  }
+
+  li+li{
+    &:before{
       padding: 0 10px;
     }
   }
-}
 
-nav{
-  ul{
-    list-style:none; /* reset */
-  }
-
-
-  &#header-nav{ /*header navigation*/
-    @extend %horizontal-nav;
-    padding-top: 8px;
-
-    ul{
-      text-align: right;
-    }
-    a{
-      @extend %link-white;
-      line-height: 1.5rem;
-    }
-
-    .searchform{ /*header nav search form*/
-      float: right;
-      margin: 14px 15px 14px 10px;
-      background: transparent;
-      padding: 0;
-
-      input[type="text"] {
-        background-color: transparent;
-        background-image: url("#{$template-path}/svg/search.svg");
-        background-position: 5px center;
-        background-repeat: no-repeat;
-        background-size: 18px 18px;
-        border: none;
-        cursor: pointer;
-        height: 24px;
-        margin: 3px 0;
-        padding: 0 0 0 34px;
-        position: relative;
-        -webkit-transition: width 400ms ease, background 400ms ease;
-        transition: width 400ms ease, background 400ms ease;
-        width: 0;
-
-        &:focus {
-          background-color: white;
-          border: 1px solid $color-border;
-          cursor: text;
-          outline: 0;
-          width: 180px;
-        }
-      }
-
-      label, input[type="submit"]{
-        display: none;
-      }
-    }
-  }
-
-  &#footer-nav{ /*footer navigation*/
-    @extend %horizontal-nav;
+  a{
     color: white;
-    a{
-      @extend %link-white;
-      line-height: 1.5rem;
+    font-weight: normal;
+    line-height: 1.5rem;
+  }
+
+  .searchform{ /*header nav search form*/
+    float: right;
+    margin: 14px 15px 14px 10px;
+    background: transparent;
+    padding: 0;
+
+    input[type="text"] {
+      background-color: transparent;
+      background-image: url("#{$template-path}/svg/search.svg");
+      background-position: 5px center;
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      border: none;
+      cursor: pointer;
+      height: 24px;
+      margin: 3px 0;
+      padding: 0 0 0 34px;
+      position: relative;
+      -webkit-transition: width 400ms ease, background 400ms ease;
+      transition: width 400ms ease, background 400ms ease;
+      width: 0;
+
+      &:focus {
+        background-color: white;
+        border: 1px solid $color-border;
+        cursor: text;
+        outline: 0;
+        width: 180px;
+      }
+    }
+
+    label, input[type="submit"]{
+      display: none;
     }
   }
 }
 
+#footer-nav{ /*footer navigation*/
+  @extend %horizontal-nav;
+  color: $color-secondary-light;
+  font-weight: 300;
+  font-size: 12px;
+
+  li+li{
+    &:before{
+      padding: 0 1px;
+    }
+  }
+
+  a{
+    line-height: 1rem;
+    font-weight: 300;
+    font-size: 12px;
+    color: $color-secondary-accent;
+  }
+}
 /***********************************
 
 Entry Content
@@ -508,7 +522,9 @@ article{
       margin: 20px;
 
       a{
-        @extend %link-white;
+        color: white;
+        font-weight: normal;
+        text-decoration: none;
       }
 
       .entry-title{
@@ -777,15 +793,30 @@ Footer Content
 ***********************************/
 
 #site-footer{
-  background-color: $color-secondary-dark;
-  text-align: center;
+
   font-size: 0.8rem;
 
+  #footer-widgets{
+    background-color: $color-secondary-accent;
+  }
+
   #footer-content-area{
-    .copyright{
-      color: $color-secondary-light;
-      font-size: 0.8rem;
+    background-color: $color-secondary-dark;
+
+    .secondary{
+      font-size: 12px;
+      padding: 2px 0;
+
+      #copyright{
+        color: $color-secondary-light;
+        text-align: right;
+        float: right;
+        margin: 1em 0;
+      }
 
     }
+
   }
 }
+
+
