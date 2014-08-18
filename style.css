@@ -42,6 +42,10 @@ body.admin-bar {
 p {
   margin: 1rem 0; }
 
+pre {
+  background-color: #f7f7f7;
+  padding: 10px; }
+
 /* Clearfix */
 .clearfix:after, #site-footer #footer-widgets:after {
   content: " ";
@@ -434,6 +438,8 @@ article .entry-meta .edit-link a:before, article .entry-meta .categories-links:b
   width: 14px;
   height: 14px; }
 
+article .twitter-tweet {
+  margin: 0 auto !important; }
 article .entry-thumbnail {
   width: 100%;
   min-height: 350px;
@@ -473,8 +479,6 @@ article .entry-meta {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/tag.svg"); }
   article .entry-meta .comments-link a:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/bubbles.svg"); }
-article .twitter-tweet {
-  margin: 0 auto !important; }
 
 /***********************************
 

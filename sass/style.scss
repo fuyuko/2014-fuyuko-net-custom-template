@@ -72,6 +72,11 @@ p{
   margin: 1rem 0;
 }
 
+pre{
+	background-color: $color-secondary-highlight;
+	padding: 10px;
+}
+
 /* Clearfix */
 .clearfix{
 	&:after{
@@ -90,6 +95,7 @@ p{
     color: $color-primary-accent;
   }
 }
+
 a{
   color: $color-primary;
   font-weight: bold;
@@ -350,9 +356,6 @@ Site Header Area
   }
 }
 
-@for $i from 1 through 3{
-
-}
 @for $i from 1 through 10{
   @if $i < 4{
     .row-#{$i}{
@@ -417,10 +420,7 @@ Site Header Area
     #site-description{
       @extend %reset-basic;
     }
-
   }
-
-
 }
 /***********************************
 
@@ -546,6 +546,20 @@ Entry Content
 }
 
 article{
+
+	.twitter-tweet{
+    margin: 0 auto !important;
+  }
+
+  img{
+    @extend %image-default-behavior;
+  }
+  
+  a{
+		&.more-link{
+			
+		}
+  }
   .entry-thumbnail{
     width: 100%;
     min-height: 350px;
@@ -632,17 +646,9 @@ article{
       }
     }
   }
-
-  .twitter-tweet{
-    margin: 0 auto !important;
-  }
-
-
-  img{
-    @extend %image-default-behavior;
-  }
-
 }
+
+
 
 /***********************************
 
