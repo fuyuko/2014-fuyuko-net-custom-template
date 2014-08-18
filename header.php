@@ -16,7 +16,7 @@
 
     <div id="page">
         <header id="site-header" role="banner">
-        <?php if(is_home() || is_front_page() || (!is_single() && !is_page())){ ?>
+        <?php if(is_home() || is_front_page() || !is_single()){ ?>
             <div id="grid-header-image" class="container">
                 <div class="wrapper">
                     <?php include('header-grid.php'); ?>
@@ -32,6 +32,8 @@
                             printf( __( 'Monthly Archives: %s', 'twentythirteen' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentythirteen' ) ) );
                         elseif ( is_year() ) :
                             printf( __( 'Yearly Archives: %s', 'twentythirteen' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentythirteen' ) ) );
+						elseif ( is_page() ) :
+							the_title();
                         else :
                             echo single_cat_title( '', false );
                         endif;

@@ -12,9 +12,11 @@
 
 
             <?php
-                if ( has_post_thumbnail()) {
-                    $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-                }
+			if ( has_post_thumbnail()) {
+				$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+			}
+			
+			if(!is_page()){				
             ?>
             <div class="entry-thumbnail" <?php if($url != NULL){ echo 'style="background-image: url(' . $url . ');"';} ?>>
                 <div class="entry-header-text">
@@ -45,7 +47,7 @@
                     </div><!-- .entry-meta -->
                 </div><!-- .entery-header-text -->
             </div><!-- .entry-thumbnail -->
-
+			<?php } ?>
 
 
     </header><!-- .entry-header -->
