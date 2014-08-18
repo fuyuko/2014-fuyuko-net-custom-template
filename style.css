@@ -15,13 +15,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 Resets
 
 ***********************************/
-/* line 36, sass/style.scss */
 * {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   box-sizing: border-box; }
 
-/* line 42, sass/style.scss */
 html, body, #header-content-area hgroup #site-title, #header-content-area hgroup #site-description, .comment-list {
   margin: 0;
   padding: 0;
@@ -34,80 +32,71 @@ html, body, #header-content-area hgroup #site-title, #header-content-area hgroup
 General Structure
 
 ***********************************/
-/* line 59, sass/style.scss */
 html, body {
   font-family: "Open Sans", Helvetica, sans-serif;
   margin-top: 37px; }
 
-/* line 66, sass/style.scss */
 body.admin-bar {
   margin-top: 75px; }
 
-/* line 71, sass/style.scss */
 p {
   margin: 1rem 0; }
 
+/* Clearfix */
+.clearfix:after, #site-footer #footer-widgets:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
 /* Link Related */
-/* line 77, sass/style.scss */
 .depth-1 > .comment-body > .comment-author a, .depth-1 > .comment-body > .comment-meta a {
   color: white; }
-  /* line 79, sass/style.scss */
   .depth-1 > .comment-body > .comment-author a:hover, .depth-1 > .comment-body > .comment-meta a:hover {
     color: #5cb811; }
 
-/* line 83, sass/style.scss */
 a {
   color: #13531a;
   font-weight: bold; }
-  /* line 86, sass/style.scss */
   a:hover {
     color: #5cb811; }
 
 /* List Related */
-/* line 93, sass/style.scss */
 li {
   line-height: 1.5em; }
 
 /* Embed Related */
-/* line 99, sass/style.scss */
 iframe {
   margin: 0 auto;
   display: block; }
 
 /* Form Related */
-/* line 106, sass/style.scss */
 input, textarea {
   border-radius: 4px;
   border-width: 1px;
   font-size: 16px;
   border-color: #999999; }
-  /* line 112, sass/style.scss */
   input:focus, textarea:focus {
     outline-color: #caefab; }
 
-/* line 116, sass/style.scss */
 form {
   background: #f7f7f7;
   padding: 10px 20px;
   border-radius: 10px; }
 
-/* line 122, sass/style.scss */
 label {
   display: block; }
 
-/* line 126, sass/style.scss */
 input {
   padding-left: 5px;
   color: #555555; }
-  /* line 130, sass/style.scss */
   input[type="text"] {
     height: 24px; }
 
-/* line 135, sass/style.scss */
 textarea {
   width: 100%; }
 
-/* line 141, sass/style.scss */
 .button, .reply a, input[type="submit"] {
   -moz-box-shadow: inset 0px 1px 0px 0px #caefab;
   -webkit-box-shadow: inset 0px 1px 0px 0px #caefab;
@@ -134,7 +123,6 @@ textarea {
   padding: 4px 20px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #caefab; }
-  /* line 172, sass/style.scss */
   .button:hover, .reply a:hover, input[type="submit"]:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a));
     background: -moz-linear-gradient(top, #5cb811 5%, #77d42a 100%);
@@ -144,12 +132,10 @@ textarea {
     background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a',GradientType=0);
     background-color: #5cb811; }
-  /* line 183, sass/style.scss */
   .button:active, .reply a:active, input[type="submit"]:active {
     position: relative;
     top: 1px; }
 
-/* line 189, sass/style.scss */
 .button-secondary, #cancel-comment-reply-link, .button-logout {
   -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -176,7 +162,6 @@ textarea {
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
   text-transform: capitalize; }
-  /* line 216, sass/style.scss */
   .button-secondary:hover, #cancel-comment-reply-link:hover, .button-logout:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #f0f0f0));
     background: -moz-linear-gradient(top, #cccccc 5%, #f0f0f0 100%);
@@ -187,50 +172,41 @@ textarea {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#f0f0f0',GradientType=0);
     background-color: #cccccc;
     color: #5c5c5c; }
-    /* line 227, sass/style.scss */
     .button-secondary:hover:active, #cancel-comment-reply-link:hover:active, .button-logout:hover:active {
       position: relative;
       top: 1px; }
 
 /* position related */
-/* line 236, sass/style.scss */
 .content-wrapper, #header-nav-area .site-logo, article .entry-content, article .entry-meta {
   max-width: 1040px;
   margin: 0 auto;
   padding: 20px; }
 
-/* line 242, sass/style.scss */
 .third {
   width: 33.33%;
   float: left;
   padding: 0 10px; }
 
-/* line 248, sass/style.scss */
 .whole {
   width: 100%;
   float: none;
   clear: both; }
 
 /*WP genarated classes*/
-/* line 256, sass/style.scss */
 .alignleft {
   float: left;
   padding: 0 10px 10px 0; }
 
-/* line 261, sass/style.scss */
 .alignright {
   float: right;
   padding: 0 0 10px 10px; }
 
-/* line 266, sass/style.scss */
 .aligncenter {
   display: block;
   margin: 5px auto 5px auto; }
 
-/* line 274, sass/style.scss */
 .wp-caption img {
   margin-bottom: 5px; }
-/* line 277, sass/style.scss */
 .wp-caption .wp-caption-text {
   font-weight: 300px;
   font-size: 0.8rem;
@@ -242,7 +218,6 @@ textarea {
 Site Header Area
 
 ***********************************/
-/* line 291, sass/style.scss */
 #header-nav-area {
   /*sticky navigation - http://xomisse.com/blog/create-a-sticky-navigation-when-scrolling-on-blogger/ */
   position: fixed;
@@ -252,145 +227,118 @@ Site Header Area
   width: 100%;
   background-color: rgba(0, 0, 0, 0.88);
   color: white; }
-  /* line 302, sass/style.scss */
   #header-nav-area .site-logo {
     float: left;
     padding: 5px; }
-    /* line 306, sass/style.scss */
     #header-nav-area .site-logo img {
       max-height: 60px; }
-  /* line 311, sass/style.scss */
   .admin-bar #header-nav-area {
     top: 32px; }
 
 /* grid header image area */
-/* line 318, sass/style.scss */
 #grid-header-image {
   margin-bottom: 20px; }
-  /* line 320, sass/style.scss */
   #grid-header-image .wrapper {
     background-color: #13531a;
     position: relative; }
 
-/* line 327, sass/style.scss */
 #grids {
   width: 100%;
   opacity: 0.5; }
 
-/* line 332, sass/style.scss */
 .grid {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   overflow: hidden; }
-  /* line 338, sass/style.scss */
   .grid img {
     width: 100%; }
 
-/* line 348, sass/style.scss */
 .row-1 {
   clear: both;
   width: 100%; }
 
-/* line 354, sass/style.scss */
 .column-1 {
   float: left;
   width: 10%;
   height: 100%; }
 
-/* line 348, sass/style.scss */
 .row-2 {
   clear: both;
   width: 100%; }
 
-/* line 354, sass/style.scss */
 .column-2 {
   float: left;
   width: 20%;
   height: 100%; }
 
-/* line 348, sass/style.scss */
 .row-3 {
   clear: both;
   width: 100%; }
 
-/* line 354, sass/style.scss */
 .column-3 {
   float: left;
   width: 30.0%;
   height: 100%; }
 
-/* line 354, sass/style.scss */
 .column-4 {
   float: left;
   width: 40%;
   height: 100%; }
 
-/* line 354, sass/style.scss */
 .column-5 {
   float: left;
   width: 50%;
   height: 100%; }
 
-/* line 354, sass/style.scss */
 .column-6 {
   float: left;
   width: 60.0%;
   height: 100%; }
 
-/* line 354, sass/style.scss */
 .column-7 {
   float: left;
   width: 70%;
   height: 100%; }
 
-/* line 354, sass/style.scss */
 .column-8 {
   float: left;
   width: 80%;
   height: 100%; }
 
-/* line 354, sass/style.scss */
 .column-9 {
   float: left;
   width: 90%;
   height: 100%; }
 
-/* line 354, sass/style.scss */
 .column-10 {
   float: left;
   width: 100%;
   height: 100%; }
 
-/* line 362, sass/style.scss */
 #grid-11 img, #grid-16 img {
   height: 100%;
   width: 200%; }
 
 /* site headline */
-/* line 370, sass/style.scss */
 #site-headline, #header-content-area {
   position: absolute;
   width: 100%;
   text-align: center;
   color: white; }
 
-/* line 377, sass/style.scss */
 #site-headline {
   bottom: 180px;
   font-size: 60px; }
 
 /* site title */
-/* line 384, sass/style.scss */
 #header-content-area {
   bottom: 60px;
   background-color: rgba(0, 0, 0, 0.88);
   padding: 20px; }
-  /* line 390, sass/style.scss */
   #header-content-area hgroup {
     position: relative;
     display: inline-block; }
-    /* line 395, sass/style.scss */
     #header-content-area hgroup .site-logo {
       height: 70px;
       position: absolute;
@@ -403,48 +351,37 @@ Site Header Area
 Navigation
 
 ***********************************/
-/* line 422, sass/style.scss */
 #header-nav ul, #footer-nav ul {
   list-style: none;
   /* reset */
   padding-left: 0; }
-/* line 427, sass/style.scss */
 #header-nav li, #footer-nav li {
   display: inline-block;
   position: relative; }
-  /* line 431, sass/style.scss */
   #header-nav li ul, #footer-nav li ul {
     display: none; }
-  /* line 435, sass/style.scss */
   #header-nav li + li:before, #footer-nav li + li:before {
     content: " | "; }
-  /* line 439, sass/style.scss */
   #header-nav li a, #footer-nav li a {
     text-decoration: none; }
 
-/* line 445, sass/style.scss */
 #header-nav {
   /*header navigation*/
   padding-top: 8px; }
-  /* line 449, sass/style.scss */
   #header-nav ul {
     text-align: right; }
-  /* line 454, sass/style.scss */
   #header-nav li + li:before {
     padding: 0 10px; }
-  /* line 459, sass/style.scss */
   #header-nav a {
     color: white;
     font-weight: normal;
     line-height: 1.5rem; }
-  /* line 465, sass/style.scss */
   #header-nav .searchform {
     /*header nav search form*/
     float: right;
     margin: 14px 15px 14px 10px;
     background: transparent;
     padding: 0; }
-    /* line 471, sass/style.scss */
     #header-nav .searchform input[type="text"] {
       background-color: transparent;
       background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/search.svg");
@@ -460,27 +397,22 @@ Navigation
       -webkit-transition: width 400ms ease, background 400ms ease;
       transition: width 400ms ease, background 400ms ease;
       width: 0; }
-      /* line 487, sass/style.scss */
       #header-nav .searchform input[type="text"]:focus {
         background-color: white;
         border: 1px solid #555555;
         cursor: text;
         outline: 0;
         width: 180px; }
-    /* line 496, sass/style.scss */
     #header-nav .searchform label, #header-nav .searchform input[type="submit"] {
       display: none; }
 
-/* line 502, sass/style.scss */
 #footer-nav {
   /*footer navigation*/
   color: #999999;
   font-weight: 300;
   font-size: 12px; }
-  /* line 509, sass/style.scss */
   #footer-nav li + li:before {
     padding: 0 1px; }
-  /* line 514, sass/style.scss */
   #footer-nav a {
     line-height: 1rem;
     font-weight: 300;
@@ -492,19 +424,16 @@ Navigation
 Entry Content
 
 ***********************************/
-/* line 526, sass/style.scss */
 .wp-caption, article img {
   max-width: 100% !important;
   height: auto !important; }
 
-/* line 531, sass/style.scss */
 article .entry-meta .edit-link a:before, article .entry-meta .categories-links:before, article .entry-meta .tags-links:before, article .entry-meta .comments-link a:before {
   margin-left: 20px;
   margin-right: 10px;
   width: 14px;
   height: 14px; }
 
-/* line 539, sass/style.scss */
 article .entry-thumbnail {
   width: 100%;
   min-height: 350px;
@@ -515,15 +444,12 @@ article .entry-thumbnail {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center; }
-  /* line 553, sass/style.scss */
   article .entry-thumbnail .entry-header-text {
     margin: 20px; }
-    /* line 556, sass/style.scss */
     article .entry-thumbnail .entry-header-text a {
       color: white;
       font-weight: normal;
       text-decoration: none; }
-    /* line 562, sass/style.scss */
     article .entry-thumbnail .entry-header-text .entry-title {
       margin: 30px auto 0;
       width: 100%;
@@ -532,29 +458,21 @@ article .entry-thumbnail {
       word-wrap: break-word;
       color: white;
       text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; }
-      /* line 571, sass/style.scss */
       article .entry-thumbnail .entry-header-text .entry-title a {
         text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000; }
-/* line 584, sass/style.scss */
 article .entry-meta {
   color: white;
   line-height: 1.4em; }
-  /* line 589, sass/style.scss */
   article .entry-meta .date {
     margin-bottom: 10px; }
-  /* line 595, sass/style.scss */
   article .entry-meta .edit-link a:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/pencil.svg"); }
-  /* line 603, sass/style.scss */
   article .entry-meta .categories-links:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/folder-open.svg"); }
-  /* line 610, sass/style.scss */
   article .entry-meta .tags-links:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/tag.svg"); }
-  /* line 618, sass/style.scss */
   article .entry-meta .comments-link a:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/bubbles.svg"); }
-/* line 626, sass/style.scss */
 article .twitter-tweet {
   margin: 0 auto !important; }
 
@@ -563,7 +481,6 @@ article .twitter-tweet {
 Comment Area
 
 ***********************************/
-/* line 643, sass/style.scss */
 .bypostauthor .comment-author .fn:after, .depth-1.bypostauthor > .comment-body > .comment-author:after {
   content: "Author";
   background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/checkmark.svg");
@@ -576,16 +493,13 @@ Comment Area
   font-weight: bold;
   text-transform: uppercase; }
 
-/* line 656, sass/style.scss */
 #comments {
   color: #333333;
   margin: 0 40px; }
   @media (max-width: 768px) {
-    /* line 656, sass/style.scss */
     #comments {
       margin: 0; } }
 
-/* line 664, sass/style.scss */
 .comments-title {
   text-align: center;
   border-top: dotted 1px #136e1a;
@@ -593,18 +507,14 @@ Comment Area
   padding: 10px;
   color: #13531a; }
 
-/* line 672, sass/style.scss */
 .comment-list {
   list-style-type: none; }
 
-/* line 677, sass/style.scss */
 .comment-author {
   border-top: dotted 1px #136e1a;
   padding-top: 10px; }
-  /* line 682, sass/style.scss */
   .comment-author .says {
     display: none; }
-  /* line 686, sass/style.scss */
   .comment-author img {
     border-radius: 74px;
     border: solid 4px #136e1a;
@@ -612,14 +522,11 @@ Comment Area
     margin: 0 10px 0 0;
     width: 43px;
     height: 43px; }
-  /* line 694, sass/style.scss */
   .comment-author a, .comment-author .fn {
     text-decoration: none;
     font-style: normal; }
-  /* line 709, sass/style.scss */
   .depth-1.bypostauthor .comment-author .fn:after {
     display: none; }
-  /* line 716, sass/style.scss */
   .depth-1.bypostauthor > .comment-body > .comment-author:after {
     position: absolute;
     bottom: -105px;
@@ -630,7 +537,6 @@ Comment Area
     background-color: #77d42a;
     color: white;
     background-image: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/checkmark-white.svg"); }
-  /* line 730, sass/style.scss */
   .depth-1 > .comment-body > .comment-author {
     text-align: center;
     font-size: 18px;
@@ -640,7 +546,6 @@ Comment Area
     position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px; }
-    /* line 742, sass/style.scss */
     .depth-1 > .comment-body > .comment-author img {
       display: block;
       margin: 0 auto;
@@ -651,48 +556,38 @@ Comment Area
       bottom: -105px;
       margin-left: -37px; }
 
-/* line 759, sass/style.scss */
 .comment-meta {
   border-bottom: dotted 1px #136e1a;
   padding-bottom: 10px;
   font-size: 12px;
   margin-bottom: 20px; }
-  /* line 764, sass/style.scss */
   .comment-meta a {
     text-decoration: none;
     font-style: normal; }
-  /* line 769, sass/style.scss */
   .comment-meta ~ * {
     margin: 0 10px 0 60px;
     font-size: small; }
-  /* line 774, sass/style.scss */
   .depth-1 > .comment-body > .comment-meta {
     text-align: center;
     background-color: #136e1a;
     padding-bottom: 40px;
     margin-bottom: 45px; }
-    /* line 783, sass/style.scss */
     .depth-1 > .comment-body > .comment-meta ~ * {
       margin: 0 30px; }
 
-/* line 789, sass/style.scss */
 .reply {
   text-align: right;
   margin-top: 10px !important;
   margin-bottom: 20px !important; }
 
-/* line 798, sass/style.scss */
 #cancel-comment-reply-link, .button-logout {
   margin-left: 15px; }
 
-/* line 803, sass/style.scss */
 .children {
   list-style-type: none;
   padding: 0 0 0 30px; }
-  /* line 806, sass/style.scss */
   .children .comment-body {
     margin: 0 20px 0 0; }
-  /* line 810, sass/style.scss */
   .children .children {
     padding-left: 60px; }
 
@@ -703,43 +598,33 @@ Footer Content
 * For Footer Navigation see Navigation Section
 
 ***********************************/
-/* line 827, sass/style.scss */
 #site-footer {
   font-size: 0.8rem; }
-  /* line 831, sass/style.scss */
   #site-footer #footer-widgets {
     background-color: #cccccc; }
-    /* line 834, sass/style.scss */
     #site-footer #footer-widgets .widget-title {
       font-size: 17px;
       text-transform: uppercase;
       color: #333333; }
-    /* line 840, sass/style.scss */
     #site-footer #footer-widgets a {
       font-weight: bold;
       text-decoration: none;
       color: #136e1a; }
-      /* line 845, sass/style.scss */
       #site-footer #footer-widgets a:hover {
         color: #5cb811; }
-    /* line 850, sass/style.scss */
     #site-footer #footer-widgets ul {
       list-style-type: none;
       margin-left: 0;
       padding-left: 0; }
-      /* line 855, sass/style.scss */
       #site-footer #footer-widgets ul li {
         border-bottom: dotted 1px #999999;
         padding: 5px 0; }
-  /* line 862, sass/style.scss */
   #site-footer #footer-content-area {
     background-color: #3b3b3b;
     padding: 0 10px; }
-    /* line 866, sass/style.scss */
     #site-footer #footer-content-area .secondary {
       font-size: 12px;
       padding: 2px 0; }
-      /* line 870, sass/style.scss */
       #site-footer #footer-content-area .secondary #copyright {
         color: #999999;
         text-align: right;

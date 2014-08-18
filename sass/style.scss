@@ -72,6 +72,16 @@ p{
   margin: 1rem 0;
 }
 
+/* Clearfix */
+.clearfix{
+	&:after{
+		content: " ";
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+	}
+}
 /* Link Related */
 
 %link-white{
@@ -829,6 +839,7 @@ Footer Content
   font-size: 0.8rem;
 
   #footer-widgets{
+	@extend .clearfix;
     background-color: $color-secondary-accent;
 
     .widget-title{
