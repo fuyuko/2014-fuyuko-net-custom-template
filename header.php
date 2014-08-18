@@ -16,11 +16,29 @@
 
     <div id="page">
         <header id="site-header" role="banner">
-        <?php if(is_home() || is_front_page()){ ?>
+        <?php if(is_home() || is_front_page() || (!is_single() && !is_page())){ ?>
             <div id="grid-header-image" class="container">
                 <div class="wrapper">
                     <?php include('header-grid.php'); ?>
-                    <div id="site-headline"><?php echo get_theme_mod( 'fuyuko_net_header_headline' ); ?></div>
+                    <div id="site-headline">
+                    <?php
+                        if(is_home() || is_front_page()){ //homepage
+                            echo get_theme_mod( 'fuyuko_net_header_headline' );
+                        }
+                    else{
+                        if ( is_day() ) :
+                            printf( __( 'Daily Archives: %s', 'twentythirteen' ), get_the_date() );
+                        elseif ( is_month() ) :
+                            printf( __( 'Monthly Archives: %s', 'twentythirteen' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentythirteen' ) ) );
+                        elseif ( is_year() ) :
+                            printf( __( 'Yearly Archives: %s', 'twentythirteen' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentythirteen' ) ) );
+                        else :
+                            echo single_cat_title( '', false );
+                        endif;
+
+                    }
+                    ?>
+                    </div>
                     <div id="header-content-area">
                         <hgroup>
                             <img class="site-logo" src='<?php echo esc_url( get_theme_mod( 'fuyuko_net_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
