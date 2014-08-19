@@ -101,7 +101,7 @@ input {
 textarea {
   width: 100%; }
 
-.button, .reply a, input[type="submit"] {
+.button, article a.more-link, .reply a, input[type="submit"] {
   -moz-box-shadow: inset 0px 1px 0px 0px #caefab;
   -webkit-box-shadow: inset 0px 1px 0px 0px #caefab;
   box-shadow: inset 0px 1px 0px 0px #caefab;
@@ -127,7 +127,7 @@ textarea {
   padding: 4px 20px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #caefab; }
-  .button:hover, .reply a:hover, input[type="submit"]:hover {
+  .button:hover, article a.more-link:hover, .reply a:hover, input[type="submit"]:hover {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a));
     background: -moz-linear-gradient(top, #5cb811 5%, #77d42a 100%);
     background: -webkit-linear-gradient(top, #5cb811 5%, #77d42a 100%);
@@ -136,7 +136,7 @@ textarea {
     background: linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a',GradientType=0);
     background-color: #5cb811; }
-  .button:active, .reply a:active, input[type="submit"]:active {
+  .button:active, article a.more-link:active, .reply a:active, input[type="submit"]:active {
     position: relative;
     top: 1px; }
 
@@ -440,6 +440,14 @@ article .entry-meta .edit-link a:before, article .entry-meta .categories-links:b
 
 article .twitter-tweet {
   margin: 0 auto !important; }
+article a.more-link {
+  /*continue reading button*/
+  display: block;
+  width: 164px;
+  margin: 20px 0 0 0;
+  padding-top: 6px; }
+  article a.more-link .meta-nav {
+    display: none; }
 article .entry-thumbnail {
   width: 100%;
   min-height: 350px;
@@ -478,6 +486,7 @@ article .entry-meta {
   article .entry-meta .tags-links:before {
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/tag.svg"); }
   article .entry-meta .comments-link a:before {
+    margin-left: 0;
     content: url("/wp-content/themes/2014-fuyuko-net-custom-template/svg/bubbles.svg"); }
 
 /***********************************

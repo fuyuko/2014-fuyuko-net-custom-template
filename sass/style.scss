@@ -556,8 +556,17 @@ article{
   }
   
   a{
-		&.more-link{
+		&.more-link{ /*continue reading button*/
+			@extend .button;
 			
+			display: block;
+			width: 164px;
+			margin: 20px 0 0 0;
+			padding-top: 6px;
+			
+			.meta-nav{
+				display: none;
+			}
 		}
   }
   .entry-thumbnail{
@@ -641,6 +650,7 @@ article{
       a{
         &:before{
           @extend %default-svg;
+		  margin-left: 0;
           content: url("#{$template-path}/svg/bubbles.svg");
         }
       }

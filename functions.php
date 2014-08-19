@@ -116,3 +116,20 @@ function fuyuko_net_customize_setup( $wp_customize ) {
     ));
 }
 add_action( 'customize_register', 'fuyuko_net_customize_setup' );
+
+/***********************************
+
+Remove Jumping To More Position
+
+ ***********************************/
+function remove_more_jump_link($link) { 
+	$offset = strpos($link, '#more-');
+	if ($offset) {
+		$end = strpos($link, '"',$offset);
+	}
+	if ($end) {
+		$link = substr_replace($link, '', $offset, $end-$offset);
+	}
+	return $link;
+}
+add_filter('the_content_more_link', 'remove_more_jump_link');
