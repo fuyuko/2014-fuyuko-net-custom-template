@@ -9,6 +9,7 @@
 <html>
 <head>
     <title><?php bloginfo( 'name' ); ?><?php wp_title(' - '); ?></title>
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>
 </head>
 

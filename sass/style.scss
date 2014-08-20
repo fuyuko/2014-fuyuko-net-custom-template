@@ -28,6 +28,9 @@ $color-secondary-accent: #ccc;
 $color-secondary-highlight: #f7f7f7;
 
 $color-transparent-black: rgba(0,0,0,0.88);
+
+$font-default: 'Open Sans', Helvetica, sans-serif;
+$font-header: 'Bitter', serif;
 /***********************************
 
 Resets
@@ -68,6 +71,7 @@ body{
   }
 }
 
+
 p{
   margin: 1rem 0;
 }
@@ -79,14 +83,61 @@ pre{
 
 /* Clearfix */
 .clearfix{
-	&:after{
-		content: " ";
-		visibility: hidden;
-		display: block;
-		height: 0;
-		clear: both;
-	}
+  &:after{
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
 }
+
+/* header */
+
+@for $i from 1 through 6{
+
+  h#{$i}{
+    font-family:  $font-header;
+    font-size: 42px -( 4px * ($i - 1));
+
+    @if $i == 1{
+      article &{
+        color: $color-primary-light;
+      }
+    }
+
+    @if $i == 2{
+      article &{
+        color: $color-primary-light;
+      }
+    }
+
+    @if $i == 3{
+      .article &{
+        color: $color-primary-light;
+      }
+    }
+
+    @if $i == 4{
+      article &{
+        color: $color-primary-light;
+      }
+    }
+
+    @if $i == 5{
+      article &{
+        color: $color-primary-accent;
+      }
+    }
+
+    @if $i == 6{
+      article &{
+        color: $color-primary-light;
+      }
+    }
+  }
+}
+
 /* Link Related */
 
 %link-white{
@@ -547,7 +598,7 @@ Entry Content
 
 article{
 
-	.twitter-tweet{
+  .twitter-tweet{
     margin: 0 auto !important;
   }
 
@@ -621,6 +672,7 @@ article{
 
     .date{
       margin-bottom: 10px;
+      color: white;
     }
 
     .edit-link{

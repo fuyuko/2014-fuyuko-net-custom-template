@@ -30,7 +30,7 @@
                     <?php endif; // is_single() ?>
 
                     <div class="entry-meta">
-                        <?php the_date('F j, Y', '<h6 class="date">', '</h6>'); ?>
+                        <?php the_date('F j, Y', '<div class="date">', '</div>'); ?>
                         <?php edit_post_link( __( 'Edit'), '<span class="edit-link">', '</span>' ); ?>
                         <?php
                             $categories_list = get_the_category_list( ', ' );
