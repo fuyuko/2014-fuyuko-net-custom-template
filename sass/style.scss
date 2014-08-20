@@ -20,6 +20,7 @@ $color-primary-highlight: #77d42a;
 $color-shadow-green: #caefab;
 
 $color-text: #333;
+$color-text-dark: #111;
 $color-border: #555;
 
 $color-secondary-dark: #3b3b3b;
@@ -40,6 +41,7 @@ Resets
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   box-sizing: border-box;
+  color: $color-text;
 }
 
 %reset-basic{
@@ -77,8 +79,10 @@ p{
 }
 
 pre{
-	background-color: $color-secondary-highlight;
-	padding: 10px;
+  background-color: $color-secondary-highlight;
+  padding: 10px 20px;
+  line-height: 1.7em;
+  color: $color-text-dark;
 }
 
 /* Clearfix */
@@ -113,7 +117,7 @@ pre{
     }
 
     @if $i == 3{
-      .article &{
+      article &{
         color: $color-primary-light;
       }
     }
@@ -442,6 +446,7 @@ Site Header Area
   @extend %grid-inner-layout;
   bottom: 180px;
   font-size: 60px;
+  font-family: $font-header;
 }
 
 /* site title */
@@ -466,10 +471,12 @@ Site Header Area
 
     #site-title{
       @extend %reset-basic;
+      font-family: $font-default;
     }
 
     #site-description{
       @extend %reset-basic;
+      font-family: $font-default;
     }
   }
 }
