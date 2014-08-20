@@ -469,14 +469,10 @@ Site Header Area
       border-radius: 70px;
     }
 
-    #site-title{
+    #site-title, #site-description{
       @extend %reset-basic;
       font-family: $font-default;
-    }
-
-    #site-description{
-      @extend %reset-basic;
-      font-family: $font-default;
+      color: white;
     }
   }
 }
@@ -657,10 +653,10 @@ article{
         -ms-word-wrap: break-word;
         word-wrap: break-word;
         color: white;
-        text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
+        text-shadow: -2px -2px 1px #333, 2px -2px 1px #333, -2px 2px 1px #333, 2px 2px 1px #333;
 
         a{
-          text-shadow: -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
+          text-shadow: -2px -2px 1px #333, 2px -2px 1px #333, -2px 2px 1px #333, 2px 2px 1px #333;
         }
       }
     }
