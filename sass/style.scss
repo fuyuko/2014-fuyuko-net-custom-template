@@ -17,6 +17,8 @@ $color-primary-light: #136E1A;
 $color-primary-accent: #5cb811;
 $color-primary-highlight: #77d42a;
 
+$color-shadow: rgba(86, 86, 86, 0.3);
+$color-shadow-dark: rgba(86, 86, 86, 0.7);
 $color-shadow-green: #caefab;
 
 $color-text: #333;
@@ -34,9 +36,9 @@ $font-default: 'Open Sans', Helvetica, sans-serif;
 $font-header: 'Bitter', serif;
 
 %box-shadow-default{
-  -webkit-box-shadow: 4px 4px 1px 0px rgba(86, 86, 86, 0.3);
-  -moz-box-shadow: 4px 4px 1px 0px rgba(86, 86, 86, 0.3);
-  box-shadow: 4px 4px 1px 0px rgba(86, 86, 86, 0.3);
+  -webkit-box-shadow: 4px 4px 1px 0px $color-shadow;
+  -moz-box-shadow: 4px 4px 1px 0px $color-shadow;
+  box-shadow: 4px 4px 1px 0px $color-shadow;
 }
 /***********************************
 
@@ -671,10 +673,10 @@ article{
         -ms-word-wrap: break-word;
         word-wrap: break-word;
         color: white;
-        text-shadow: -2px -2px 1px #333, 2px -2px 1px #333, -2px 2px 1px #333, 2px 2px 1px #333;
+        text-shadow: -1px -1px 1px $color-shadow-dark, 1px -1px 1px $color-shadow-dark, -1px 1px 1px $color-shadow-dark, 1px 1px 1px $color-shadow-dark;
 
         a{
-          text-shadow: -2px -2px 1px #333, 2px -2px 1px #333, -2px 2px 1px #333, 2px 2px 1px #333;
+          text-shadow: -1px -1px 1px $color-shadow-dark, 1px -1px 1px $color-shadow-dark, -1px 1px 1px $color-shadow-dark, 1px 1px 1px $color-shadow-dark;
         }
       }
     }
@@ -765,6 +767,7 @@ Comment Area
   border-top: dotted 1px $color-primary-light;
   border-bottom: dotted 1px $color-primary-light;
   padding: 10px;
+  margin: 1em 0;
   color: $color-primary;
 }
 
@@ -912,7 +915,9 @@ Comment Area
 }
 
 #respond{
-
+  h3.comment-reply-title{
+    margin: 1em 0;
+  }
 }
 
 /***********************************
@@ -979,4 +984,20 @@ Footer Content
   }
 }
 
+/***********************************
 
+Plugin Specific
+
+***********************************/
+
+/* Jetpack - share */
+div.sharedaddy{
+  margin-top: 10px;
+  border-top: solid 1px $color-secondary-highlight;
+  border-bottom: solid 1px $color-secondary-highlight;
+  h3.sd-title{
+    &:before {
+      border-top: none !important;
+    }
+  }
+}
