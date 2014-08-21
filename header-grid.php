@@ -32,82 +32,82 @@
     <div class="column-2">
         <div class="row-1">
             <div id="grid-1" class="grid column-5">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-1.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-1.jpg" />'; ?>
             </div>
             <div id="grid-2" class="grid column-5">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-2.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-2.jpg" />'; ?>
             </div>
         </div>
         <div class="row-1">
             <div id="grid-3" class="grid column-10">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-3.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-3.jpg" />'; ?>
             </div>
         </div>
         <div class="row-1">
             <div id="grid-4" class="grid column-5">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-4.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-4.jpg" />'; ?>
             </div>
             <div id="grid-5" class="grid column-5">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-5.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-5.jpg" />'; ?>
             </div>
         </div>
     </div>
     <div id="grid-6" class="grid column-3">
-        <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-6.png" />'; ?>
+        <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-6.jpg" />'; ?>
     </div>
     <div class="column-1">
         <div class="row-1">
             <div id="grid-7" class="grid column-10">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-7.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-7.jpg" />'; ?>
             </div>
         </div>
         <div class="row-1">
             <div id="grid-8" class="grid column-10">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-8.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-8.jpg" />'; ?>
             </div>
         </div>
         <div class="row-1">
             <div id="grid-9" class="grid column-10">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-9.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-9.jpg" />'; ?>
             </div>
         </div>
     </div>
     <div class="column-1">
         <div class="row-1">
             <div id="grid-10" class="grid column-10">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-10.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-10.jpg" />'; ?>
             </div>
         </div>
         <div class="row-2">
             <div id="grid-11" class="grid column-10">
-                <?php echo '<img class="vertical" src="' . get_template_directory_uri() . '/images/header/header-11.png" />'; ?>
+                <?php echo '<img class="vertical" src="' . get_template_directory_uri() . '/images/header/header-11.jpg" />'; ?>
             </div>
         </div>
     </div>
     <div class="column-2">
         <div class="row-2">
             <div id="grid-12" class="grid column-10">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-12.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-12.jpg" />'; ?>
             </div>
         </div>
         <div class="row-1">
             <div id="grid-13" class="grid column-5">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-13.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-13.jpg" />'; ?>
             </div>
             <div id="grid-14" class="grid column-5">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-14.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-14.jpg" />'; ?>
             </div>
         </div>
     </div>
     <div class="column-1">
         <div class="row-1">
             <div id="grid-15" class="grid column-10">
-                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-15.png" />'; ?>
+                <?php echo '<img src="' . get_template_directory_uri() . '/images/header/header-15.jpg" />'; ?>
             </div>
         </div>
         <div class="row-2">
             <div id="grid-16" class="grid column-10">
-                <?php echo '<img class="vertical" src="' . get_template_directory_uri() . '/images/header/header-16.png" />'; ?>
+                <?php echo '<img class="vertical" src="' . get_template_directory_uri() . '/images/header/header-16.jpg" />'; ?>
             </div>
         </div>
     </div>
