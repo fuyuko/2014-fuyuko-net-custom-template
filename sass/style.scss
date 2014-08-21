@@ -32,6 +32,12 @@ $color-transparent-black: rgba(0,0,0,0.88);
 
 $font-default: 'Open Sans', Helvetica, sans-serif;
 $font-header: 'Bitter', serif;
+
+%box-shadow-default{
+  -webkit-box-shadow: 4px 4px 1px 0px rgba(86, 86, 86, 0.3);
+  -moz-box-shadow: 4px 4px 1px 0px rgba(86, 86, 86, 0.3);
+  box-shadow: 4px 4px 1px 0px rgba(86, 86, 86, 0.3);
+}
 /***********************************
 
 Resets
@@ -78,11 +84,22 @@ p{
   margin: 1rem 0;
 }
 
+/*pre, blockquote*/
 pre{
   background-color: $color-secondary-highlight;
   padding: 10px 20px;
   line-height: 1.7em;
   color: $color-text-dark;
+}
+
+blockquote{
+  @extend %box-shadow-default;
+  font-weight: 300;
+  margin: 20px 0 40px 0;
+  border: solid 1px $color-secondary-accent;
+  padding: 20px;
+  color: $color-text;
+  border-radius: 4px;
 }
 
 /* Clearfix */
@@ -101,6 +118,7 @@ pre{
 @for $i from 1 through 6{
 
   h#{$i}{
+    @extend %reset-basic;
     font-family:  $font-header;
     font-size: 42px -( 4px * ($i - 1));
 
