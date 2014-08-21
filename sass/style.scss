@@ -86,25 +86,8 @@ p{
   margin: 1rem 0;
 }
 
-/*pre, blockquote*/
-pre{
-  background-color: $color-secondary-highlight;
-  padding: 10px 20px;
-  line-height: 1.7em;
-  color: $color-text-dark;
-}
+/* position related */
 
-blockquote{
-  @extend %box-shadow-default;
-  font-weight: 300;
-  margin: 20px 0 40px 0;
-  border: solid 1px $color-secondary-accent;
-  padding: 20px;
-  color: $color-text;
-  border-radius: 4px;
-}
-
-/* Clearfix */
 .clearfix{
   &:after{
     content: " ";
@@ -113,6 +96,30 @@ blockquote{
     height: 0;
     clear: both;
   }
+}
+
+.content-wrapper{
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.third{
+  width: 33.33%;
+  float: left;
+  padding: 0 10px;
+}
+
+.half{
+  width: 50%;
+  float: left;
+  padding: 0 10px;
+}
+
+.whole{
+  width: 100%;
+  float: none;
+  clear: both;
 }
 
 /* header */
@@ -183,6 +190,24 @@ a{
 
 li{
   line-height: 1.5em;
+}
+
+/*pre, blockquote*/
+pre{
+  background-color: $color-secondary-highlight;
+  padding: 10px 20px;
+  line-height: 1.7em;
+  color: $color-text-dark;
+}
+
+blockquote{
+  @extend %box-shadow-default;
+  font-weight: 300;
+  margin: 20px 0 40px 0;
+  border: solid 1px $color-secondary-accent;
+  padding: 20px;
+  color: $color-text;
+  border-radius: 4px;
 }
 
 /* Embed Related */
@@ -322,25 +347,7 @@ textarea{
   }
 }
 
-/* position related */
 
-.content-wrapper{
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.third{
-  width: 33.33%;
-  float: left;
-  padding: 0 10px;
-}
-
-.whole{
-  width: 100%;
-  float: none;
-  clear: both;
-}
 
 /*WP genarated classes*/
 
