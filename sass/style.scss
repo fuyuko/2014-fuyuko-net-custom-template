@@ -9,6 +9,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: 2014-fuyuko-net-custom-template
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
+
+Media Queries
+
+@media screen and (max-width: 782px) - admin-bar layout change occurs
+
 */
 
 $template-path: "/wp-content/themes/2014-fuyuko-net-custom-template";
@@ -40,6 +45,8 @@ $font-header: 'Bitter', serif;
   -moz-box-shadow: 4px 4px 1px 0px $color-shadow;
   box-shadow: 4px 4px 1px 0px $color-shadow;
 }
+
+
 /***********************************
 
 Resets
@@ -408,6 +415,10 @@ Site Header Area
 
   .admin-bar &{
     top: 32px;
+
+    @media screen and (max-width: 782px){
+      top: 46px;
+    }
   }
 }
 
@@ -471,7 +482,7 @@ Site Header Area
 
 #site-headline{
   @extend %grid-inner-layout;
-  bottom: 180px;
+  bottom: 50%;
   font-size: 60px;
   font-family: $font-header;
 }
@@ -479,7 +490,7 @@ Site Header Area
 /* site title */
 #header-content-area{
   @extend %grid-inner-layout;
-  bottom: 60px;
+  bottom: 20px;
   background-color: $color-transparent-black;
   padding: 20px;
 
@@ -764,8 +775,8 @@ Comment Area
 #comments{
   color: $color-text;
   margin: 0 40px;
-  @media (max-width: 768px) {
-    margin: 0;
+  @media screen and (max-width: 782px){
+  margin: 0;
   }
 }
 
